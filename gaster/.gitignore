@@ -1,0 +1,13 @@
+gaster
+/build/
+/local-artifacts/
+__pycache__/
+*.pyc
+*.ipsw
+*.im4p
+*.dmg
+*.shsh
+*.shsh2
+*.kbag
+*.key
+.env

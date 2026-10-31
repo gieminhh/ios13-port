@@ -1,0 +1,4 @@
+USB 80/06 value=0100 index=0000 length=18 timeout=5 ms result=18 (OK) elapsed=0.146 ms
+USB 80/06 value=0304 index=0409 length=255 timeout=5 ms result=228 (OK) elapsed=0.174 ms
+Guarded commands require the N61AP A8 target (CPID 7000, BDID 00).
+No matching DFU device; guarded commands do not wait or run an exploit.

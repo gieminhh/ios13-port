@@ -1,0 +1,1308 @@
+{
+  "timestamp_utc": "2026-10-31T10:30:38.923877+00:00",
+  "previous_artifacts": [
+    {
+      "path": "/cdrom/ios13-research/boot-hardware-diff.txt",
+      "exists": true,
+      "size": 1293,
+      "matches_previous_size": true,
+      "previous_sha256": "81fae7d7eb9056b3325f4e890ecce35734e0463679500e0db4df952e8f685112"
+    },
+    {
+      "path": "/cdrom/ios13-research/bootchain-ipad13/iBEC.ipad5.RELEASE.im4p",
+      "exists": true,
+      "size": 738015,
+      "matches_previous_size": true,
+      "previous_sha256": "17880f93ffceb93efe8e7e897ee332b14461a59958967b5eec959064bddf0f3e"
+    },
+    {
+      "path": "/cdrom/ios13-research/bootchain-ipad13/iBSS.ipad5.RELEASE.im4p",
+      "exists": true,
+      "size": 186015,
+      "matches_previous_size": true,
+      "previous_sha256": "734d6e3815f2d9216cec5bef755283d8c0ef3db7766ad2e9bcd0a29e706cde97"
+    },
+    {
+      "path": "/cdrom/ios13-research/devicetree-comparison.txt",
+      "exists": true,
+      "size": 12248,
+      "matches_previous_size": true,
+      "previous_sha256": "0e7f9cb9b6bd8aac7acd5725bd9299ac12d85fc64c2f04ea9dc4450d1b3d6822"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/BuildManifest.plist",
+      "exists": true,
+      "size": 501160,
+      "matches_previous_size": true,
+      "previous_sha256": "20a76d917d2d1ab73449576650b1049a50a06f40e76c64df70aece17bf4642b9"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/DeviceTree.j96ap.im4p",
+      "exists": true,
+      "size": 139394,
+      "matches_previous_size": true,
+      "previous_sha256": "17b71caf23dcd2ffd7f9007e3b3a46461748bcc06cfcf7ff7ee2aea1d9003ddb"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/iBEC.ipad5.RELEASE.im4p",
+      "exists": true,
+      "size": 738015,
+      "matches_previous_size": true,
+      "previous_sha256": "17880f93ffceb93efe8e7e897ee332b14461a59958967b5eec959064bddf0f3e"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/iBSS.ipad5.RELEASE.im4p",
+      "exists": true,
+      "size": 186015,
+      "matches_previous_size": true,
+      "previous_sha256": "734d6e3815f2d9216cec5bef755283d8c0ef3db7766ad2e9bcd0a29e706cde97"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/kernelcache.release.ipad5",
+      "exists": true,
+      "size": 17371932,
+      "matches_previous_size": true,
+      "previous_sha256": "2e2da5029d742e70b26e0dadcdbc2dd25dc25f9e1ff2b8be2fdd4323b0e37d8a"
+    },
+    {
+      "path": "/cdrom/ios13-research/gaster-backup.tar.gz",
+      "exists": true,
+      "size": 138698,
+      "matches_previous_size": true,
+      "previous_sha256": "f0b0ea37a6394c8127fb425f17f0e227f48ea12847e3f63c5c0de85c4e5dcb2c"
+    },
+    {
+      "path": "/cdrom/ios13-research/iPadOS13.7.ipsw",
+      "exists": true,
+      "size": 3694602857,
+      "matches_previous_size": true,
+      "previous_sha256": null
+    },
+    {
+      "path": "/cdrom/ios13-research/j96-device-tree.json",
+      "exists": true,
+      "size": 78290,
+      "matches_previous_size": true,
+      "previous_sha256": "240d1528b9be33975a2a0e1f1cf42c361ca8bc42c2381ceaec96ec3378a5e1a3"
+    },
+    {
+      "path": "/cdrom/ios13-research/kernelcache-ipad13-decompressed",
+      "exists": true,
+      "size": 34684928,
+      "matches_previous_size": true,
+      "previous_sha256": "43f1596e84dcbd3eb734f91a342a51afff2f045131dbb05c81d92c78222eab0e"
+    },
+    {
+      "path": "/cdrom/ios13-research/kext-comparison.txt",
+      "exists": true,
+      "size": 6818,
+      "matches_previous_size": true,
+      "previous_sha256": "fa7cb05c6bdcaf5c02a2d72c445386e04a428576e862836534bb420249a066c5"
+    },
+    {
+      "path": "/cdrom/ios13-research/n61-device-tree.json",
+      "exists": true,
+      "size": 80668,
+      "matches_previous_size": true,
+      "previous_sha256": "fe5e9c299062696ac858b934c07e3c53c03d7eb643144b8a8bd0d7bf90f43c28"
+    },
+    {
+      "path": "/cdrom/ios13-research/test.txt",
+      "exists": true,
+      "size": 0,
+      "matches_previous_size": true,
+      "previous_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "ios13_manifest": {
+    "ProductVersion": "13.7",
+    "ProductBuildVersion": "17H35",
+    "SupportedProductTypes": [
+      "iPad5,2",
+      "iPad5,3",
+      "iPad5,1",
+      "iPad5,4"
+    ],
+    "identities": [
+      {
+        "DeviceClass": "j81ap",
+        "ApChipID": "0x7001",
+        "ApBoardID": "0x06",
+        "Variant": "Customer Erase Install (IPSW)",
+        "RestoreBehavior": "Erase",
+        "components": {
+          "AppleLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "BatteryCharging0": {
+            "Path": "Firmware/all_flash/batterycharging0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 9449
+          },
+          "BatteryCharging1": {
+            "Path": "Firmware/all_flash/batterycharging1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 34593
+          },
+          "BatteryFull": {
+            "Path": "Firmware/all_flash/batteryfull@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 98964
+          },
+          "BatteryLow0": {
+            "Path": "Firmware/all_flash/batterylow0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 119710
+          },
+          "BatteryLow1": {
+            "Path": "Firmware/all_flash/batterylow1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3847
+          },
+          "BatteryPlugin": {
+            "Path": "Firmware/all_flash/glyphplugin@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4068
+          },
+          "DeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j81ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 121450
+          },
+          "KernelCache": {
+            "Path": "kernelcache.release.ipad5b",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17337893
+          },
+          "LLB": {
+            "Path": "Firmware/all_flash/LLB.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186079
+          },
+          "OS": {
+            "Path": "038-68261-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3492965904
+          },
+          "RecoveryMode": {
+            "Path": "Firmware/all_flash/recoverymode@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 433647
+          },
+          "RestoreDeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j81ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 121450
+          },
+          "RestoreKernelCache": {
+            "Path": "kernelcache.release.ipad5b",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17337893
+          },
+          "RestoreLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "RestoreRamDisk": {
+            "Path": "038-68702-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 104180251
+          },
+          "RestoreSEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j81.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "RestoreTrustCache": {
+            "Path": "Firmware/038-68702-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4403
+          },
+          "SEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j81.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "StaticTrustCache": {
+            "Path": "Firmware/038-68261-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 40351
+          },
+          "ftap": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "ftsp": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "iBEC": {
+            "Path": "Firmware/dfu/iBEC.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 733919
+          },
+          "iBSS": {
+            "Path": "Firmware/dfu/iBSS.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186079
+          },
+          "iBoot": {
+            "Path": "Firmware/all_flash/iBoot.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 733919
+          },
+          "rfta": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "rfts": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          }
+        }
+      },
+      {
+        "DeviceClass": "j82ap",
+        "ApChipID": "0x7001",
+        "ApBoardID": "0x02",
+        "Variant": "Customer Erase Install (IPSW)",
+        "RestoreBehavior": "Erase",
+        "components": {
+          "AppleLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "BasebandFirmware": {
+            "Path": "Firmware/Mav10-9.71.01.Release.bbfw",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 26407084
+          },
+          "BatteryCharging0": {
+            "Path": "Firmware/all_flash/batterycharging0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 9449
+          },
+          "BatteryCharging1": {
+            "Path": "Firmware/all_flash/batterycharging1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 34593
+          },
+          "BatteryFull": {
+            "Path": "Firmware/all_flash/batteryfull@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 98964
+          },
+          "BatteryLow0": {
+            "Path": "Firmware/all_flash/batterylow0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 119710
+          },
+          "BatteryLow1": {
+            "Path": "Firmware/all_flash/batterylow1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3847
+          },
+          "BatteryPlugin": {
+            "Path": "Firmware/all_flash/glyphplugin@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4068
+          },
+          "DeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j82ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 125330
+          },
+          "KernelCache": {
+            "Path": "kernelcache.release.ipad5b",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17337893
+          },
+          "LLB": {
+            "Path": "Firmware/all_flash/LLB.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186079
+          },
+          "OS": {
+            "Path": "038-68261-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3492965904
+          },
+          "RecoveryMode": {
+            "Path": "Firmware/all_flash/recoverymode@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 433647
+          },
+          "RestoreDeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j82ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 125330
+          },
+          "RestoreKernelCache": {
+            "Path": "kernelcache.release.ipad5b",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17337893
+          },
+          "RestoreLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "RestoreRamDisk": {
+            "Path": "038-68702-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 104180251
+          },
+          "RestoreSEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j82.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "RestoreTrustCache": {
+            "Path": "Firmware/038-68702-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4403
+          },
+          "SEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j82.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "StaticTrustCache": {
+            "Path": "Firmware/038-68261-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 40351
+          },
+          "ftap": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "ftsp": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "iBEC": {
+            "Path": "Firmware/dfu/iBEC.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 733919
+          },
+          "iBSS": {
+            "Path": "Firmware/dfu/iBSS.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186079
+          },
+          "iBoot": {
+            "Path": "Firmware/all_flash/iBoot.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 733919
+          },
+          "rfta": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "rfts": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          }
+        }
+      },
+      {
+        "DeviceClass": "j96ap",
+        "ApChipID": "0x7000",
+        "ApBoardID": "0x08",
+        "Variant": "Customer Erase Install (IPSW)",
+        "RestoreBehavior": "Erase",
+        "components": {
+          "AppleLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "BatteryCharging0": {
+            "Path": "Firmware/all_flash/batterycharging0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 9449
+          },
+          "BatteryCharging1": {
+            "Path": "Firmware/all_flash/batterycharging1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 34593
+          },
+          "BatteryFull": {
+            "Path": "Firmware/all_flash/batteryfull@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 98964
+          },
+          "BatteryLow0": {
+            "Path": "Firmware/all_flash/batterylow0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 119710
+          },
+          "BatteryLow1": {
+            "Path": "Firmware/all_flash/batterylow1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3847
+          },
+          "BatteryPlugin": {
+            "Path": "Firmware/all_flash/glyphplugin@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4068
+          },
+          "DeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j96ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 139394
+          },
+          "KernelCache": {
+            "Path": "kernelcache.release.ipad5",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17371932
+          },
+          "LLB": {
+            "Path": "Firmware/all_flash/LLB.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186015
+          },
+          "OS": {
+            "Path": "038-68261-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3492965904
+          },
+          "RecoveryMode": {
+            "Path": "Firmware/all_flash/recoverymode@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 433647
+          },
+          "RestoreDeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j96ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 139394
+          },
+          "RestoreKernelCache": {
+            "Path": "kernelcache.release.ipad5",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17371932
+          },
+          "RestoreLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "RestoreRamDisk": {
+            "Path": "038-68702-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 104180251
+          },
+          "RestoreSEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j96.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "RestoreTrustCache": {
+            "Path": "Firmware/038-68702-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4403
+          },
+          "SEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j96.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "StaticTrustCache": {
+            "Path": "Firmware/038-68261-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 40351
+          },
+          "ftap": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "ftsp": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "iBEC": {
+            "Path": "Firmware/dfu/iBEC.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 738015
+          },
+          "iBSS": {
+            "Path": "Firmware/dfu/iBSS.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186015
+          },
+          "iBoot": {
+            "Path": "Firmware/all_flash/iBoot.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 738015
+          },
+          "rfta": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "rfts": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          }
+        }
+      },
+      {
+        "DeviceClass": "j97ap",
+        "ApChipID": "0x7000",
+        "ApBoardID": "0x0A",
+        "Variant": "Customer Erase Install (IPSW)",
+        "RestoreBehavior": "Erase",
+        "components": {
+          "AppleLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "BasebandFirmware": {
+            "Path": "Firmware/Mav10-9.71.01.Release.bbfw",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 26407084
+          },
+          "BatteryCharging0": {
+            "Path": "Firmware/all_flash/batterycharging0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 9449
+          },
+          "BatteryCharging1": {
+            "Path": "Firmware/all_flash/batterycharging1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 34593
+          },
+          "BatteryFull": {
+            "Path": "Firmware/all_flash/batteryfull@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 98964
+          },
+          "BatteryLow0": {
+            "Path": "Firmware/all_flash/batterylow0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 119710
+          },
+          "BatteryLow1": {
+            "Path": "Firmware/all_flash/batterylow1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3847
+          },
+          "BatteryPlugin": {
+            "Path": "Firmware/all_flash/glyphplugin@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4068
+          },
+          "DeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j97ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 143222
+          },
+          "KernelCache": {
+            "Path": "kernelcache.release.ipad5",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17371932
+          },
+          "LLB": {
+            "Path": "Firmware/all_flash/LLB.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186015
+          },
+          "OS": {
+            "Path": "038-68261-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3492965904
+          },
+          "RecoveryMode": {
+            "Path": "Firmware/all_flash/recoverymode@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 433647
+          },
+          "RestoreDeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j97ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 143222
+          },
+          "RestoreKernelCache": {
+            "Path": "kernelcache.release.ipad5",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17371932
+          },
+          "RestoreLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "RestoreRamDisk": {
+            "Path": "038-68702-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 104180251
+          },
+          "RestoreSEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j97.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "RestoreTrustCache": {
+            "Path": "Firmware/038-68702-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4403
+          },
+          "SEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j97.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "StaticTrustCache": {
+            "Path": "Firmware/038-68261-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 40351
+          },
+          "ftap": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "ftsp": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "iBEC": {
+            "Path": "Firmware/dfu/iBEC.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 738015
+          },
+          "iBSS": {
+            "Path": "Firmware/dfu/iBSS.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186015
+          },
+          "iBoot": {
+            "Path": "Firmware/all_flash/iBoot.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 738015
+          },
+          "rfta": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "rfts": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          }
+        }
+      },
+      {
+        "DeviceClass": "j81ap",
+        "ApChipID": "0x7001",
+        "ApBoardID": "0x06",
+        "Variant": "Customer Upgrade Install (IPSW)",
+        "RestoreBehavior": "Update",
+        "components": {
+          "AppleLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "BatteryCharging0": {
+            "Path": "Firmware/all_flash/batterycharging0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 9449
+          },
+          "BatteryCharging1": {
+            "Path": "Firmware/all_flash/batterycharging1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 34593
+          },
+          "BatteryFull": {
+            "Path": "Firmware/all_flash/batteryfull@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 98964
+          },
+          "BatteryLow0": {
+            "Path": "Firmware/all_flash/batterylow0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 119710
+          },
+          "BatteryLow1": {
+            "Path": "Firmware/all_flash/batterylow1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3847
+          },
+          "BatteryPlugin": {
+            "Path": "Firmware/all_flash/glyphplugin@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4068
+          },
+          "DeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j81ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 121450
+          },
+          "KernelCache": {
+            "Path": "kernelcache.release.ipad5b",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17337893
+          },
+          "LLB": {
+            "Path": "Firmware/all_flash/LLB.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186079
+          },
+          "OS": {
+            "Path": "038-68261-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3492965904
+          },
+          "RecoveryMode": {
+            "Path": "Firmware/all_flash/recoverymode@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 433647
+          },
+          "RestoreDeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j81ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 121450
+          },
+          "RestoreKernelCache": {
+            "Path": "kernelcache.release.ipad5b",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17337893
+          },
+          "RestoreLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "RestoreRamDisk": {
+            "Path": "038-69020-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 106952731
+          },
+          "RestoreSEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j81.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "RestoreTrustCache": {
+            "Path": "Firmware/038-69020-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4579
+          },
+          "SEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j81.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "StaticTrustCache": {
+            "Path": "Firmware/038-68261-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 40351
+          },
+          "ftap": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "ftsp": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "iBEC": {
+            "Path": "Firmware/dfu/iBEC.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 733919
+          },
+          "iBSS": {
+            "Path": "Firmware/dfu/iBSS.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186079
+          },
+          "iBoot": {
+            "Path": "Firmware/all_flash/iBoot.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 733919
+          },
+          "rfta": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "rfts": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          }
+        }
+      },
+      {
+        "DeviceClass": "j82ap",
+        "ApChipID": "0x7001",
+        "ApBoardID": "0x02",
+        "Variant": "Customer Upgrade Install (IPSW)",
+        "RestoreBehavior": "Update",
+        "components": {
+          "AppleLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "BasebandFirmware": {
+            "Path": "Firmware/Mav10-9.71.01.Release.bbfw",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 26407084
+          },
+          "BatteryCharging0": {
+            "Path": "Firmware/all_flash/batterycharging0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 9449
+          },
+          "BatteryCharging1": {
+            "Path": "Firmware/all_flash/batterycharging1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 34593
+          },
+          "BatteryFull": {
+            "Path": "Firmware/all_flash/batteryfull@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 98964
+          },
+          "BatteryLow0": {
+            "Path": "Firmware/all_flash/batterylow0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 119710
+          },
+          "BatteryLow1": {
+            "Path": "Firmware/all_flash/batterylow1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3847
+          },
+          "BatteryPlugin": {
+            "Path": "Firmware/all_flash/glyphplugin@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4068
+          },
+          "DeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j82ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 125330
+          },
+          "KernelCache": {
+            "Path": "kernelcache.release.ipad5b",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17337893
+          },
+          "LLB": {
+            "Path": "Firmware/all_flash/LLB.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186079
+          },
+          "OS": {
+            "Path": "038-68261-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3492965904
+          },
+          "RecoveryMode": {
+            "Path": "Firmware/all_flash/recoverymode@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 433647
+          },
+          "RestoreDeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j82ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 125330
+          },
+          "RestoreKernelCache": {
+            "Path": "kernelcache.release.ipad5b",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17337893
+          },
+          "RestoreLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "RestoreRamDisk": {
+            "Path": "038-69020-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 106952731
+          },
+          "RestoreSEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j82.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "RestoreTrustCache": {
+            "Path": "Firmware/038-69020-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4579
+          },
+          "SEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j82.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "StaticTrustCache": {
+            "Path": "Firmware/038-68261-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 40351
+          },
+          "ftap": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "ftsp": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "iBEC": {
+            "Path": "Firmware/dfu/iBEC.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 733919
+          },
+          "iBSS": {
+            "Path": "Firmware/dfu/iBSS.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186079
+          },
+          "iBoot": {
+            "Path": "Firmware/all_flash/iBoot.ipad5b.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 733919
+          },
+          "rfta": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "rfts": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          }
+        }
+      },
+      {
+        "DeviceClass": "j96ap",
+        "ApChipID": "0x7000",
+        "ApBoardID": "0x08",
+        "Variant": "Customer Upgrade Install (IPSW)",
+        "RestoreBehavior": "Update",
+        "components": {
+          "AppleLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "BatteryCharging0": {
+            "Path": "Firmware/all_flash/batterycharging0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 9449
+          },
+          "BatteryCharging1": {
+            "Path": "Firmware/all_flash/batterycharging1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 34593
+          },
+          "BatteryFull": {
+            "Path": "Firmware/all_flash/batteryfull@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 98964
+          },
+          "BatteryLow0": {
+            "Path": "Firmware/all_flash/batterylow0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 119710
+          },
+          "BatteryLow1": {
+            "Path": "Firmware/all_flash/batterylow1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3847
+          },
+          "BatteryPlugin": {
+            "Path": "Firmware/all_flash/glyphplugin@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4068
+          },
+          "DeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j96ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 139394
+          },
+          "KernelCache": {
+            "Path": "kernelcache.release.ipad5",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17371932
+          },
+          "LLB": {
+            "Path": "Firmware/all_flash/LLB.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186015
+          },
+          "OS": {
+            "Path": "038-68261-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3492965904
+          },
+          "RecoveryMode": {
+            "Path": "Firmware/all_flash/recoverymode@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 433647
+          },
+          "RestoreDeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j96ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 139394
+          },
+          "RestoreKernelCache": {
+            "Path": "kernelcache.release.ipad5",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17371932
+          },
+          "RestoreLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "RestoreRamDisk": {
+            "Path": "038-69020-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 106952731
+          },
+          "RestoreSEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j96.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "RestoreTrustCache": {
+            "Path": "Firmware/038-69020-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4579
+          },
+          "SEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j96.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "StaticTrustCache": {
+            "Path": "Firmware/038-68261-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 40351
+          },
+          "ftap": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "ftsp": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "iBEC": {
+            "Path": "Firmware/dfu/iBEC.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 738015
+          },
+          "iBSS": {
+            "Path": "Firmware/dfu/iBSS.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186015
+          },
+          "iBoot": {
+            "Path": "Firmware/all_flash/iBoot.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 738015
+          },
+          "rfta": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "rfts": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          }
+        }
+      },
+      {
+        "DeviceClass": "j97ap",
+        "ApChipID": "0x7000",
+        "ApBoardID": "0x0A",
+        "Variant": "Customer Upgrade Install (IPSW)",
+        "RestoreBehavior": "Update",
+        "components": {
+          "AppleLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "BasebandFirmware": {
+            "Path": "Firmware/Mav10-9.71.01.Release.bbfw",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 26407084
+          },
+          "BatteryCharging0": {
+            "Path": "Firmware/all_flash/batterycharging0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 9449
+          },
+          "BatteryCharging1": {
+            "Path": "Firmware/all_flash/batterycharging1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 34593
+          },
+          "BatteryFull": {
+            "Path": "Firmware/all_flash/batteryfull@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 98964
+          },
+          "BatteryLow0": {
+            "Path": "Firmware/all_flash/batterylow0@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 119710
+          },
+          "BatteryLow1": {
+            "Path": "Firmware/all_flash/batterylow1@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3847
+          },
+          "BatteryPlugin": {
+            "Path": "Firmware/all_flash/glyphplugin@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4068
+          },
+          "DeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j97ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 143222
+          },
+          "KernelCache": {
+            "Path": "kernelcache.release.ipad5",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17371932
+          },
+          "LLB": {
+            "Path": "Firmware/all_flash/LLB.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186015
+          },
+          "OS": {
+            "Path": "038-68261-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 3492965904
+          },
+          "RecoveryMode": {
+            "Path": "Firmware/all_flash/recoverymode@2x~ipad-lightning.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 433647
+          },
+          "RestoreDeviceTree": {
+            "Path": "Firmware/all_flash/DeviceTree.j97ap.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 143222
+          },
+          "RestoreKernelCache": {
+            "Path": "kernelcache.release.ipad5",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17371932
+          },
+          "RestoreLogo": {
+            "Path": "Firmware/all_flash/applelogo@2x~ipad.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 17598
+          },
+          "RestoreRamDisk": {
+            "Path": "038-69020-036.dmg",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 106952731
+          },
+          "RestoreSEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j97.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "RestoreTrustCache": {
+            "Path": "Firmware/038-69020-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 4579
+          },
+          "SEP": {
+            "Path": "Firmware/all_flash/sep-firmware.j97.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 2408666
+          },
+          "StaticTrustCache": {
+            "Path": "Firmware/038-68261-036.dmg.trustcache",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 40351
+          },
+          "ftap": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "ftsp": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "iBEC": {
+            "Path": "Firmware/dfu/iBEC.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 738015
+          },
+          "iBSS": {
+            "Path": "Firmware/dfu/iBSS.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 186015
+          },
+          "iBoot": {
+            "Path": "Firmware/all_flash/iBoot.ipad5.RELEASE.im4p",
+            "ExistsInIPSW": true,
+            "ZipUncompressedSize": 738015
+          },
+          "rfta": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          },
+          "rfts": {
+            "Path": null,
+            "ExistsInIPSW": false,
+            "ZipUncompressedSize": null
+          }
+        }
+      }
+    ],
+    "zip_entries": 53,
+    "restore_product_types": [
+      "iPad5,2",
+      "iPad5,3",
+      "iPad5,1",
+      "iPad5,4"
+    ]
+  }
+}

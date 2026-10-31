@@ -1,0 +1,92 @@
+{
+  "source_url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-28352/B80B4A86-C206-4C4F-8D35-65579694AEE9/iPhone_4.7_12.5.8_16H88_Restore.ipsw",
+  "timestamp_utc": "2026-10-31T10:31:13.898588+00:00",
+  "members": [
+    {
+      "zip_path": "BuildManifest.plist",
+      "local_path": "local-artifacts/ios13/native-n61-12.5.8/BuildManifest.plist",
+      "bytes": 128360,
+      "zip_crc32": "dfe84ce5",
+      "sha256": "82f356d6142538b9fd1d785c4bc8415e0c1762e890b83792515ef28bdd615225"
+    },
+    {
+      "zip_path": "Restore.plist",
+      "local_path": "local-artifacts/ios13/native-n61-12.5.8/Restore.plist",
+      "bytes": 984,
+      "zip_crc32": "c5ea74d2",
+      "sha256": "70cbdc1fa65a99d79b44e6201ff5107888ceba5d128ecff456e0ff0d3979f314"
+    },
+    {
+      "zip_path": "Firmware/dfu/iBSS.n61.RELEASE.im4p",
+      "local_path": "local-artifacts/ios13/native-n61-12.5.8/Firmware/dfu/iBSS.n61.RELEASE.im4p",
+      "bytes": 181023,
+      "zip_crc32": "c4d3ead1",
+      "sha256": "ca9b27b178f0fffa267d80a1e0d0d6d6751dd3bf11f528632c5f8f2235dffa2e"
+    },
+    {
+      "zip_path": "Firmware/dfu/iBEC.n61.RELEASE.im4p",
+      "local_path": "local-artifacts/ios13/native-n61-12.5.8/Firmware/dfu/iBEC.n61.RELEASE.im4p",
+      "bytes": 725727,
+      "zip_crc32": "6a4d4f30",
+      "sha256": "b5bd080e12a1f88ef4c7e7cc5d92550ed09392a10f093fc27b4e32b9829d13cb"
+    },
+    {
+      "zip_path": "Firmware/all_flash/DeviceTree.n61ap.im4p",
+      "local_path": "local-artifacts/ios13/native-n61-12.5.8/Firmware/all_flash/DeviceTree.n61ap.im4p",
+      "bytes": 119913,
+      "zip_crc32": "818326bf",
+      "sha256": "beb4edc19e93bf775ab31bf4b783dcb4c1829a0267b981a8898a033e21f45199"
+    },
+    {
+      "zip_path": "kernelcache.release.iphone7",
+      "local_path": "local-artifacts/ios13/native-n61-12.5.8/kernelcache.release.iphone7",
+      "bytes": 14066697,
+      "zip_crc32": "e529e6a8",
+      "sha256": "77763e1f1b92234388875e73c473749b96111e787110de13f4c933298e8a7b6d"
+    }
+  ],
+  "device_operations": 0,
+  "identity": {
+    "ProductVersion": "12.5.8",
+    "ProductBuildVersion": "16H88",
+    "SupportedProductTypes": [
+      "iPhone7,2"
+    ],
+    "DeviceClass": "n61ap",
+    "ApChipID": "0x7000",
+    "ApBoardID": "0x06",
+    "Variant": "Customer Erase Install (IPSW)"
+  },
+  "component_paths": {
+    "AppleLogo": "Firmware/all_flash/applelogo@2x~iphone.im4p",
+    "BasebandFirmware": "Firmware/Mav10-13.00.00.Release.bbfw",
+    "BatteryCharging0": "Firmware/all_flash/batterycharging0@2x~iphone.im4p",
+    "BatteryCharging1": "Firmware/all_flash/batterycharging1@2x~iphone.im4p",
+    "BatteryFull": "Firmware/all_flash/batteryfull@2x~iphone.im4p",
+    "BatteryLow0": "Firmware/all_flash/batterylow0@2x~iphone.im4p",
+    "BatteryLow1": "Firmware/all_flash/batterylow1@2x~iphone.im4p",
+    "BatteryPlugin": "Firmware/all_flash/glyphplugin@1334~iphone-lightning.im4p",
+    "DeviceTree": "Firmware/all_flash/DeviceTree.n61ap.im4p",
+    "KernelCache": "kernelcache.release.iphone7",
+    "LLB": "Firmware/all_flash/LLB.n61.RELEASE.im4p",
+    "OS": "038-87263-058.dmg",
+    "RecoveryMode": "Firmware/all_flash/recoverymode@1334~iphone-lightning.im4p",
+    "RestoreDeviceTree": "Firmware/all_flash/DeviceTree.n61ap.im4p",
+    "RestoreKernelCache": "kernelcache.release.iphone7",
+    "RestoreLogo": "Firmware/all_flash/applelogo@2x~iphone.im4p",
+    "RestoreRamDisk": "038-87170-068.dmg",
+    "RestoreSEP": "Firmware/all_flash/sep-firmware.n61.RELEASE.im4p",
+    "RestoreTrustCache": "Firmware/038-87170-068.dmg.trustcache",
+    "SEP": "Firmware/all_flash/sep-firmware.n61.RELEASE.im4p",
+    "StaticTrustCache": "Firmware/038-87263-058.dmg.trustcache",
+    "ftap": null,
+    "ftsp": null,
+    "iBEC": "Firmware/dfu/iBEC.n61.RELEASE.im4p",
+    "iBSS": "Firmware/dfu/iBSS.n61.RELEASE.im4p",
+    "iBoot": "Firmware/all_flash/iBoot.n61.RELEASE.im4p",
+    "rfta": null,
+    "rfts": null
+  },
+  "success": true,
+  "network_bytes": 14239403
+}

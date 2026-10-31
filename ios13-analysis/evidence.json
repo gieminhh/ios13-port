@@ -1,0 +1,233 @@
+{
+  "date_utc": "2026-10-31",
+  "scope": "Static/offline only. No USB device commands or source modifications.",
+  "gaster_commit": "20958256a4706b6396e2d9ee9ca742618459980b",
+  "gaster_source_sha256": "814f57d1d09819396877a57da7507843dbed4e29e2aaa9d04fa5f53faf4424df",
+  "gaster_binary_sha256": "9e9e6c303e79671b38eb9ecf0f656c1fcfaddcada7096ef3c1bc1a1fed0cd2ce",
+  "cdrom_mount_observed": "/dev/sda1 vfat ro,noatime",
+  "artifacts": [
+    {
+      "path": "/cdrom/ios13-research/boot-hardware-diff.txt",
+      "size": 1293,
+      "sha256": "81fae7d7eb9056b3325f4e890ecce35734e0463679500e0db4df952e8f685112"
+    },
+    {
+      "path": "/cdrom/ios13-research/bootchain-ipad13/iBEC.ipad5.RELEASE.im4p",
+      "size": 738015,
+      "sha256": "17880f93ffceb93efe8e7e897ee332b14461a59958967b5eec959064bddf0f3e"
+    },
+    {
+      "path": "/cdrom/ios13-research/bootchain-ipad13/iBSS.ipad5.RELEASE.im4p",
+      "size": 186015,
+      "sha256": "734d6e3815f2d9216cec5bef755283d8c0ef3db7766ad2e9bcd0a29e706cde97"
+    },
+    {
+      "path": "/cdrom/ios13-research/devicetree-comparison.txt",
+      "size": 12248,
+      "sha256": "0e7f9cb9b6bd8aac7acd5725bd9299ac12d85fc64c2f04ea9dc4450d1b3d6822"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/BuildManifest.plist",
+      "size": 501160,
+      "sha256": "20a76d917d2d1ab73449576650b1049a50a06f40e76c64df70aece17bf4642b9"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/DeviceTree.j96ap.im4p",
+      "size": 139394,
+      "sha256": "17b71caf23dcd2ffd7f9007e3b3a46461748bcc06cfcf7ff7ee2aea1d9003ddb"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/iBEC.ipad5.RELEASE.im4p",
+      "size": 738015,
+      "sha256": "17880f93ffceb93efe8e7e897ee332b14461a59958967b5eec959064bddf0f3e"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/iBSS.ipad5.RELEASE.im4p",
+      "size": 186015,
+      "sha256": "734d6e3815f2d9216cec5bef755283d8c0ef3db7766ad2e9bcd0a29e706cde97"
+    },
+    {
+      "path": "/cdrom/ios13-research/extracted-ipad-mini4/kernelcache.release.ipad5",
+      "size": 17371932,
+      "sha256": "2e2da5029d742e70b26e0dadcdbc2dd25dc25f9e1ff2b8be2fdd4323b0e37d8a"
+    },
+    {
+      "path": "/cdrom/ios13-research/gaster-backup.tar.gz",
+      "size": 138698,
+      "sha256": "f0b0ea37a6394c8127fb425f17f0e227f48ea12847e3f63c5c0de85c4e5dcb2c"
+    },
+    {
+      "path": "/cdrom/ios13-research/iPadOS13.7.ipsw",
+      "size": 3694602857
+    },
+    {
+      "path": "/cdrom/ios13-research/j96-device-tree.json",
+      "size": 78290,
+      "sha256": "240d1528b9be33975a2a0e1f1cf42c361ca8bc42c2381ceaec96ec3378a5e1a3"
+    },
+    {
+      "path": "/cdrom/ios13-research/kernelcache-ipad13-decompressed",
+      "size": 34684928,
+      "sha256": "43f1596e84dcbd3eb734f91a342a51afff2f045131dbb05c81d92c78222eab0e"
+    },
+    {
+      "path": "/cdrom/ios13-research/kext-comparison.txt",
+      "size": 6818,
+      "sha256": "fa7cb05c6bdcaf5c02a2d72c445386e04a428576e862836534bb420249a066c5"
+    },
+    {
+      "path": "/cdrom/ios13-research/n61-device-tree.json",
+      "size": 80668,
+      "sha256": "fe5e9c299062696ac858b934c07e3c53c03d7eb643144b8a8bd0d7bf90f43c28"
+    },
+    {
+      "path": "/cdrom/ios13-research/test.txt",
+      "size": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ],
+  "kernel": {
+    "version_strings": [
+      "Darwin Kernel Version 19.6.0: Sat Jul 11 00:58:31 PDT 2020; root:xnu-6153.142.1~8/RELEASE_ARM64_T7000",
+      "Darwin Kernel Version 19.6.0: Sat Jul 11 00:58:31 PDT 2020; root:xnu-6153.142.1~8/RELEASE_ARM64_T7000"
+    ],
+    "sha256": "43f1596e84dcbd3eb734f91a342a51afff2f045131dbb05c81d92c78222eab0e",
+    "segments": [
+      {
+        "name": "__TEXT",
+        "vmaddr": "0xfffffff007004000",
+        "vmsize": 573440,
+        "fileoff": 0,
+        "filesize": 573440
+      },
+      {
+        "name": "__DATA_CONST",
+        "vmaddr": "0xfffffff007090000",
+        "vmsize": 147456,
+        "fileoff": 573440,
+        "filesize": 147456
+      },
+      {
+        "name": "__TEXT_EXEC",
+        "vmaddr": "0xfffffff0070b4000",
+        "vmsize": 6258688,
+        "fileoff": 720896,
+        "filesize": 6258688
+      },
+      {
+        "name": "__LAST",
+        "vmaddr": "0xfffffff0076ac000",
+        "vmsize": 16384,
+        "fileoff": 6979584,
+        "filesize": 16384
+      },
+      {
+        "name": "__KLD",
+        "vmaddr": "0xfffffff0076b0000",
+        "vmsize": 16384,
+        "fileoff": 6995968,
+        "filesize": 16384
+      },
+      {
+        "name": "__DATA",
+        "vmaddr": "0xfffffff0076b4000",
+        "vmsize": 720896,
+        "fileoff": 7012352,
+        "filesize": 229376
+      },
+      {
+        "name": "__BOOTDATA",
+        "vmaddr": "0xfffffff007764000",
+        "vmsize": 98304,
+        "fileoff": 7241728,
+        "filesize": 98304
+      },
+      {
+        "name": "__PRELINK_TEXT",
+        "vmaddr": "0xfffffff0059d8000",
+        "vmsize": 5521408,
+        "fileoff": 7798784,
+        "filesize": 5521408
+      },
+      {
+        "name": "__PRELINK_INFO",
+        "vmaddr": "0xfffffff007904000",
+        "vmsize": 2490368,
+        "fileoff": 32194560,
+        "filesize": 2490368
+      },
+      {
+        "name": "__PLK_TEXT_EXEC",
+        "vmaddr": "0xfffffff005f1c000",
+        "vmsize": 15253504,
+        "fileoff": 13320192,
+        "filesize": 15253504
+      },
+      {
+        "name": "__PRELINK_DATA",
+        "vmaddr": "0xfffffff0077ec000",
+        "vmsize": 1146880,
+        "fileoff": 31047680,
+        "filesize": 1146880
+      },
+      {
+        "name": "__PLK_DATA_CONST",
+        "vmaddr": "0xfffffff006da8000",
+        "vmsize": 2473984,
+        "fileoff": 28573696,
+        "filesize": 2473984
+      },
+      {
+        "name": "__PLK_LLVM_COV",
+        "vmaddr": "0xfffffff007904000",
+        "vmsize": 0,
+        "fileoff": 32194560,
+        "filesize": 0
+      },
+      {
+        "name": "__PLK_LINKEDIT",
+        "vmaddr": "0xfffffff007904000",
+        "vmsize": 0,
+        "fileoff": 32194560,
+        "filesize": 0
+      },
+      {
+        "name": "__LINKEDIT",
+        "vmaddr": "0xfffffff00777c000",
+        "vmsize": 446024,
+        "fileoff": 7340032,
+        "filesize": 446024
+      }
+    ],
+    "prelink_info": {
+      "fileoff": 32194560,
+      "size": 2490368
+    },
+    "kext_count": 203,
+    "independent_lzss_reconstruction": {
+      "identical": true,
+      "uncompressed_bytes": 34684928,
+      "compressed_bytes": 17322341,
+      "adler32": "0x1a514294",
+      "checksum_matched": true
+    }
+  },
+  "devicetrees": {
+    "n61_nodes": 147,
+    "j96_nodes": 168,
+    "common": 113,
+    "only_n61": 34,
+    "only_j96": 55,
+    "j96_raw_dt_bytes": 139340,
+    "j96_raw_dt_paths_match_json": true
+  },
+  "upstream_reset_fix_commit": "7fffffff38a1bed1cdc1c5bae0df70f14395129b",
+  "patches_applied": false,
+  "device_tests_run": false,
+  "firmware_downloads": false,
+  "notes": [
+    "Full multi-gigabyte IPSW SHA256 not computed. Extracted key components compared byte-for-byte with ZIP members.",
+    "iOS12 raw kernel and native N61 bootloaders not found in the inspected research directory.",
+    "Installed OS and current pwned DFU state are user-reported; not queried live."
+  ]
+}

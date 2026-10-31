@@ -1,0 +1,73 @@
+{
+  "components": {
+    "iBSS": {
+      "path": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/native-n61-12.5.8/Firmware/dfu/iBSS.n61.RELEASE.im4p",
+      "sha256": "ca9b27b178f0fffa267d80a1e0d0d6d6751dd3bf11f528632c5f8f2235dffa2e",
+      "manifest_digest_bytes": 20,
+      "type": "ibss",
+      "description": "iBoot-4513.270.14",
+      "payload_bytes": 180864,
+      "payload_first16_hex": "466e607cbe121c7e2f8c9077291b1507",
+      "kbag_present": true,
+      "whole_im4p_manifest_digest_matches": true,
+      "kbag_types": [
+        1,
+        2
+      ],
+      "encrypted_kbag_file": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/ibss-type1-encrypted-kbag.hex",
+      "plaintext_available": false
+    },
+    "iBEC": {
+      "path": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/native-n61-12.5.8/Firmware/dfu/iBEC.n61.RELEASE.im4p",
+      "sha256": "b5bd080e12a1f88ef4c7e7cc5d92550ed09392a10f093fc27b4e32b9829d13cb",
+      "manifest_digest_bytes": 20,
+      "type": "ibec",
+      "description": "iBoot-4513.270.14",
+      "payload_bytes": 725568,
+      "payload_first16_hex": "c9827178b1dfd51e3840f78aed58a6a5",
+      "kbag_present": true,
+      "whole_im4p_manifest_digest_matches": true,
+      "kbag_types": [
+        1,
+        2
+      ],
+      "encrypted_kbag_file": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/ibec-type1-encrypted-kbag.hex",
+      "plaintext_available": false
+    },
+    "DeviceTree": {
+      "path": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/native-n61-12.5.8/Firmware/all_flash/DeviceTree.n61ap.im4p",
+      "sha256": "beb4edc19e93bf775ab31bf4b783dcb4c1829a0267b981a8898a033e21f45199",
+      "manifest_digest_bytes": 20,
+      "type": "dtre",
+      "description": "EmbeddedDeviceTrees-3871.270.11.700.1",
+      "payload_bytes": 119852,
+      "payload_first16_hex": "13000000110000007461726765742d74",
+      "kbag_present": false,
+      "whole_im4p_manifest_digest_matches": true,
+      "plaintext_payload_file": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/native-n61-12.5.8/DeviceTree.payload",
+      "plaintext_available": true
+    },
+    "KernelCache": {
+      "path": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/native-n61-12.5.8/kernelcache.release.iphone7",
+      "sha256": "77763e1f1b92234388875e73c473749b96111e787110de13f4c933298e8a7b6d",
+      "manifest_digest_bytes": 20,
+      "type": "krnl",
+      "description": "KernelCacheBuilder-1469.260.15",
+      "payload_bytes": 14066643,
+      "payload_first16_hex": "636f6d706c7a7373058d614701af3208",
+      "kbag_present": false,
+      "whole_im4p_manifest_digest_matches": true,
+      "plaintext_payload_file": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/native-n61-12.5.8/KernelCache.payload",
+      "plaintext_available": true,
+      "decompressed_file": "/mnt/c/Users/cmjnh/Desktop/ios13-port/ios13-analysis/continuation-20261031/native-n61-12.5.8/KernelCache.decompressed",
+      "decompressed_bytes": 28258824,
+      "decompressed_sha256": "858c32f5cdde200a79d55623c354f1a59c9290aa5f6f08b65ccf9aafa4d183bf",
+      "adler32_matches": true,
+      "mach_o_arm64": true,
+      "darwin_versions": [
+        "Darwin Kernel Version 18.7.0: Fri Aug 19 23:28:26 PDT 2022; root:xnu-4903.272.5~1/RELEASE_ARM64_T7000",
+        "Darwin Kernel Version 18.7.0: Fri Aug 19 23:28:26 PDT 2022; root:xnu-4903.272.5~1/RELEASE_ARM64_T7000"
+      ]
+    }
+  }
+}

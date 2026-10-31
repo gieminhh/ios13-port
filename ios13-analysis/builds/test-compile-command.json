@@ -1,0 +1,22 @@
+[
+  "/home/ubuntu/ios13-analysis/toolchain/root/usr/bin/x86_64-linux-gnu-gcc-15",
+  "-B/home/ubuntu/ios13-analysis/toolchain/root/usr/libexec/gcc/x86_64-linux-gnu/15/",
+  "-B/home/ubuntu/ios13-analysis/toolchain/root/usr/lib/gcc/x86_64-linux-gnu/15/",
+  "-Wall",
+  "-Wextra",
+  "-Wpedantic",
+  "-Werror",
+  "-DHAVE_LIBUSB",
+  "-DVERSION=\"offline-test\"",
+  "-I/home/ubuntu/ios13-analysis/builds/include",
+  "-I/home/ubuntu/gaster",
+  "-I/home/ubuntu/ios13-analysis/toolchain/root/usr/include",
+  "-I/home/ubuntu/ios13-analysis/toolchain/root/usr/include/x86_64-linux-gnu",
+  "/home/ubuntu/gaster/tests/test_usb_mock.c",
+  "/home/ubuntu/gaster/lzfse.c",
+  "-o",
+  "/home/ubuntu/ios13-analysis/builds/gaster-usb-mock-test",
+  "/usr/lib/x86_64-linux-gnu/libcrypto.so.3",
+  "-pthread",
+  "-ldl"
+]

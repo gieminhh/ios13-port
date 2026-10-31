@@ -1,0 +1,20 @@
+--- a/gaster.c
++++ b/gaster.c
+@@ -587,7 +587,7 @@
+ 			gUSBSerialNumber = 0x180088E48;
+ 			dfu_handle_request = 0x180088DF8;
+ 			usb_core_do_transfer = 0x100011BB4;
+-			dfu_handle_bus_reset = 0x180088E28;
++			dfu_handle_bus_reset = 0x180088E18;
+ 			insecure_memory_base = 0x180380000;
+ 			handle_interface_request = 0x100011EE4;
+ 			usb_create_string_descriptor = 0x100011074;
+@@ -602,7 +602,7 @@
+ 			gUSBSerialNumber = 0x1800888C8;
+ 			dfu_handle_request = 0x180088878;
+ 			usb_core_do_transfer = 0x10000EBB4;
+-			dfu_handle_bus_reset = 0x1800888A8;
++			dfu_handle_bus_reset = 0x180088898;
+ 			insecure_memory_base = 0x180380000;
+ 			handle_interface_request = 0x10000EEE4;
+ 			usb_create_string_descriptor = 0x10000E074;

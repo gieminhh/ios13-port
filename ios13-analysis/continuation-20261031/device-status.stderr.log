@@ -1,0 +1,3 @@
+USB 80/06 value=0100 index=0000 length=18 timeout=1000 ms result=18 (OK) elapsed=0.178 ms
+USB 80/06 value=0304 index=0409 length=255 timeout=1000 ms result=228 (OK) elapsed=0.238 ms
+USB A1/05 value=0000 index=0000 length=1 timeout=1000 ms result=1 (OK) elapsed=0.124 ms

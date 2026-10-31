@@ -1,0 +1,3 @@
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+CPID: 0x7000

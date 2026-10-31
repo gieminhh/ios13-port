@@ -1,0 +1,155 @@
+=== KEXT COMPARISON ===
+iOS 12: 194
+iOS 13: 203
+Common: 182
+Only iOS 12: 12
+Only iOS 13: 21
+Different versions: 109
+
+=== ONLY iOS 12 ===
+com.apple.driver.AppleCS42L67Audio
+com.apple.driver.AppleChestnutDisplayPMU
+com.apple.driver.AppleD2186PMU
+com.apple.driver.AppleDRV2604Vibrator
+com.apple.driver.AppleMultitouchSPIC1F57
+com.apple.driver.AppleMultitouchSPIN56
+com.apple.driver.AppleMultitouchSPIN61
+com.apple.driver.ApplePinotLCD
+com.apple.driver.AppleSN2400Charger
+com.apple.iokit.IOAcceleratorFamily
+com.apple.iokit.usb.AppleUSBHostUserClient
+com.apple.nke.pptp
+
+=== ONLY iOS 13 ===
+com.apple.driver.AppleANXDPTX
+com.apple.driver.AppleActuatorDriver
+com.apple.driver.AppleCS42L81Audio
+com.apple.driver.AppleD2207PMU
+com.apple.driver.AppleDPDisplay
+com.apple.driver.AppleEmbeddedAudioLibs
+com.apple.driver.AppleEmbeddedProx
+com.apple.driver.AppleInputDeviceSupport
+com.apple.driver.AppleMAX98721Amp
+com.apple.driver.AppleMultitouchDriver
+com.apple.driver.AppleMultitouchSPIJ96
+com.apple.driver.AppleSPU
+com.apple.driver.AppleTopCaseActuatorHIDDriver
+com.apple.driver.AppleTopCaseHIDEventDriver
+com.apple.driver.AppleUSBTopCaseDriver
+com.apple.driver.usb.AppleUSBHostPlatformProperties
+com.apple.driver.watchdog
+com.apple.iokit.CoreAnalyticsFamily
+com.apple.iokit.IOAccessoryPortUSB
+com.apple.iokit.IOBiometricFamily
+com.apple.iokit.IODisplayPortFamily
+
+=== DIFFERENT VERSIONS ===
+com.apple.AGXFirmwareKextG4P: Unknown -> 158.9.8
+com.apple.AGXG4P: 133.6 -> 158.9.8
+com.apple.AUC: Unknown -> 1.0
+com.apple.driver.ASIOKit: 6.38.0 -> 7.79.0
+com.apple.driver.ASPSupportNodes: Unknown -> 1
+com.apple.driver.AppleAE2Audio: 89.14 -> 89.16
+com.apple.driver.AppleARMPMU: Unknown -> 1.0
+com.apple.driver.AppleAVEH7: 102.83.0 -> 200.3.0
+com.apple.driver.AppleBCMWLANBusInterfacePCIe: Unknown -> 1
+com.apple.driver.AppleBSDKextStarterVPN: Unknown -> 3
+com.apple.driver.AppleBiometricServices: Unknown -> 1
+com.apple.driver.AppleBluetoothDebugService: Unknown -> 1
+com.apple.driver.AppleC26Charger: Unknown -> 1.0.1
+com.apple.driver.AppleCS35L19Amp: 432.70 -> 436.20
+com.apple.driver.AppleCSEmbeddedAudio: 432.70 -> 436.20
+com.apple.driver.AppleCycloneErrorHandler: Unknown -> 1
+com.apple.driver.AppleDialogPMU: Unknown -> 1.0.1
+com.apple.driver.AppleEffaceableBlockDevice: Unknown -> 1.0
+com.apple.driver.AppleEffaceableStorage: Unknown -> 1.0
+com.apple.driver.AppleEmbeddedAudio: 432.70 -> 436.20
+com.apple.driver.AppleEmbeddedPCIE: Unknown -> 1
+com.apple.driver.AppleEmbeddedUSB: Unknown -> 1
+com.apple.driver.AppleEmbeddedUSBHost: Unknown -> 1
+com.apple.driver.AppleFirmwareUpdateKext: Unknown -> 1
+com.apple.driver.AppleH6CameraInterface: 14.23.0 -> 14.31.0
+com.apple.driver.AppleHIDKeyboard: 208 -> 213
+com.apple.driver.AppleIDAMInterface: Unknown -> 1
+com.apple.driver.AppleIPAppender: Unknown -> 1.0
+com.apple.driver.AppleJPEGDriver: 4.4.12 -> 4.4.13
+com.apple.driver.AppleLMBacklight: Unknown -> 1
+com.apple.driver.AppleM2ScalerCSCDriver: 250.6.1 -> 255.2.1
+com.apple.driver.AppleMikeyBusAudio: 1.0.0 -> 2.35
+com.apple.driver.AppleMobileApNonce: Unknown -> 1
+com.apple.driver.AppleMultitouchSPI: 2140.3 -> 3150.5
+com.apple.driver.AppleOnboardSerial: Unknown -> 1.0
+com.apple.driver.AppleOscar: Unknown -> 1
+com.apple.driver.ApplePMGR: Unknown -> 1
+com.apple.driver.AppleS5L8960X: Unknown -> 1
+com.apple.driver.AppleS5L8960XDART: Unknown -> 1
+com.apple.driver.AppleS5L8960XGPIOIC: Unknown -> 1
+com.apple.driver.AppleS5L8960XUSB: Unknown -> 1
+com.apple.driver.AppleS5L8960XWatchDogTimer: Unknown -> 1
+com.apple.driver.AppleSEPCredentialManager: Unknown -> 1.0
+com.apple.driver.AppleSEPKeyStore: Unknown -> 2
+com.apple.driver.AppleSEPManager: Unknown -> 1.0.1
+com.apple.driver.AppleSMC: Unknown -> 1
+com.apple.driver.AppleSSE: Unknown -> 1.0
+com.apple.driver.AppleSamsungPKE: Unknown -> 1
+com.apple.driver.AppleSamsungSPI: Unknown -> 1
+com.apple.driver.AppleStorageDrivers: 456.260.3 -> 489.120.1
+com.apple.driver.AppleT7000: Unknown -> 1
+com.apple.driver.AppleT7000CLPC: Unknown -> 1
+com.apple.driver.AppleT7000PCIe: Unknown -> 1
+com.apple.driver.AppleT7000PMGR: Unknown -> 1
+com.apple.driver.AppleT7000SOCTuner: Unknown -> 1
+com.apple.driver.AppleT7000SmartIO: Unknown -> 1
+com.apple.driver.AppleUSBAudio: 315.6 -> 323.4
+com.apple.driver.AppleUSBCardReader: 456.260.3 -> 489.120.1
+com.apple.driver.AppleUSBDeviceAudioController: 315.6 -> 323.4
+com.apple.driver.AppleUSBEthernetDevice: Unknown -> 7.0
+com.apple.driver.AppleUSBHSIC: Unknown -> 1
+com.apple.driver.AppleVXD393: 3.28.7 -> 3.37
+com.apple.driver.FairPlayIOKit: 65.9.0 -> 67.11.0
+com.apple.driver.IODARTFamily: Unknown -> 1
+com.apple.driver.IOSlaveProcessor: Unknown -> 1
+com.apple.driver.LSKDIOKit: 14.19.2 -> 15.13.0
+com.apple.driver.LSKDIOKitMSE: 9.18.0 -> 10.6.0
+com.apple.driver.LightweightVolumeManager: Unknown -> 1
+com.apple.driver.ProvInfoIOKit: 8.9.0 -> 10.4.0
+com.apple.driver.USBStorageDeviceSpecifics: 456.260.3 -> 489.120.1
+com.apple.driver.usb.AppleUSBCommon: Unknown -> 1.0
+com.apple.driver.usb.AppleUSBEHCI: Unknown -> 1.2
+com.apple.driver.usb.AppleUSBHostCompositeDevice: Unknown -> 1.2
+com.apple.driver.usb.AppleUSBHostPacketFilter: Unknown -> 1.0
+com.apple.driver.usb.AppleUSBHostT7000: Unknown -> 1
+com.apple.driver.usb.AppleUSBHub: Unknown -> 1.2
+com.apple.driver.usb.AppleUSBOHCI: Unknown -> 1.2
+com.apple.driver.usb.IOUSBHostHIDDevice: Unknown -> 1.2
+com.apple.driver.usb.IOUSBHostHIDDeviceSafeBoot: Unknown -> 1.2
+com.apple.filesystems.apfs: 945.272.3 -> 1412.140.3
+com.apple.filesystems.hfs.kext: 407.200.4 -> 522.100.5
+com.apple.iokit.AppleARMIISAudio: 80.13 -> 80.26
+com.apple.iokit.IO80211Family: 1200.12.2 -> 1200.12.2b1
+com.apple.iokit.IOAcceleratorFamily2: 398.9 -> 438.15.3
+com.apple.iokit.IOAudio2Family: Unknown -> 1.0
+com.apple.iokit.IOCECFamily: Unknown -> 1
+com.apple.iokit.IOCryptoAcceleratorFamily: Unknown -> 1.0.1
+com.apple.iokit.IOMobileGraphicsFamily: 331.6.1 -> 338.6.1
+com.apple.iokit.IOSCSIArchitectureModelFamily: 408.250.3 -> 422.120.3
+com.apple.iokit.IOSCSIBlockCommandsDevice: 408.250.3 -> 422.120.3
+com.apple.iokit.IOSkywalkFamily: Unknown -> 1
+com.apple.iokit.IOSurface: 255.2.1 -> 269.11
+com.apple.iokit.IOTimeSyncFamily: 740.2 -> 810.1
+com.apple.iokit.IOUSBHostFamily: Unknown -> 1.2
+com.apple.iokit.IOUSBMassStorageDriver: 145.200.2 -> 157.140.1
+com.apple.iokit.IOUserEthernet: Unknown -> 1.0.1
+com.apple.kec.Libm: Unknown -> 1
+com.apple.kec.corecrypto: Unknown -> 1.0
+com.apple.kec.pthread: Unknown -> 1
+com.apple.kext.CoreTrust: Unknown -> 1
+com.apple.kpi.bsd: 18.7.0 -> 19.6.0
+com.apple.kpi.dsep: 18.7.0 -> 19.6.0
+com.apple.kpi.iokit: 18.7.0 -> 19.6.0
+com.apple.kpi.libkern: 18.7.0 -> 19.6.0
+com.apple.kpi.mach: 18.7.0 -> 19.6.0
+com.apple.kpi.private: 18.7.0 -> 19.6.0
+com.apple.kpi.unsupported: 18.7.0 -> 19.6.0
+com.apple.plugin.IOgPTPPlugin: 740.2 -> 810.1
+com.apple.security.AppleImage4: Unknown -> 1

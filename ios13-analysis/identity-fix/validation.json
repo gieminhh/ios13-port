@@ -1,0 +1,30 @@
+{
+  "date_utc": "2026-10-31T10:27:03.224630+00:00",
+  "baseline_regression_exit_code": -6,
+  "test_cases": 47,
+  "test_exit_code": 0,
+  "asan_ubsan_exit_code": 0,
+  "compiler_flags": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror"
+  ],
+  "production_compile_exit_code": 0,
+  "production_binary_executed": false,
+  "production_binary_mode": "0644",
+  "original_binaries_and_payload_hashes_preserved": true,
+  "real_device_operations_in_this_task": 0,
+  "source_sha256": "16b8b020fc3e38a6ad3bb3d228b8a23e313087d60217e0c4041f9ce32939daf4",
+  "candidate_binary_sha256": "409822d95dc0e79be613e9dfa1c05664ac03e975eec845ed4e5780c7337aaa74",
+  "board_mapping_provenance": {
+    "source": "https://raw.githubusercontent.com/libimobiledevice/libirecovery/master/src/libirecovery.c",
+    "retrieved_in_previous_chat": "01a1915a-17fd-7a02-aeb7-4d3a45fb0a48",
+    "rows": [
+      "{ \"iPhone7,1\", \"n56ap\", 0x04, 0x7000, \"iPhone 6 Plus\" }",
+      "{ \"iPhone7,2\", \"n61ap\", 0x06, 0x7000, \"iPhone 6\" }",
+      "{ \"iPad5,1\", \"j96ap\", 0x08, 0x7000, \"iPad mini 4 (WiFi)\" }"
+    ],
+    "note": "Reused prior retrieved source excerpts; no new board research or USB reads."
+  }
+}

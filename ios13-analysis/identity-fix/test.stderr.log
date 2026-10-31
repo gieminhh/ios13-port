@@ -1,0 +1,38 @@
+DFU identity CPID 0x7000, BDID 0x00; guarded commands require N61AP A8 (CPID 0x7000, BDID 0x06) and a matching BootROM profile.
+DFU identity CPID 0x7000, BDID 0x04; guarded commands require N61AP A8 (CPID 0x7000, BDID 0x06) and a matching BootROM profile.
+DFU identity CPID 0x7000, BDID 0x08; guarded commands require N61AP A8 (CPID 0x7000, BDID 0x06) and a matching BootROM profile.
+DFU identity CPID 0x8000, BDID 0x06; guarded commands require N61AP A8 (CPID 0x7000, BDID 0x06) and a matching BootROM profile.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.
+USB A1/02 value=FFFF index=0000 length=0 timeout=5000 ms result=-7 (LIBUSB_ERROR_TIMEOUT) elapsed=0.000 ms
+USB 02/03 value=0000 index=0080 length=0 timeout=5 ms result=-9 (MOCK_ERROR) elapsed=0.000 ms
+No matching DFU device; guarded commands do not wait or run an exploit.
+No matching DFU device; guarded commands do not wait or run an exploit.
+Device is not marked pwned; no exploit or USB reset was attempted.
+Unsupported DFU BootROM profile (SRTG); refusing the command.
+No matching DFU device; guarded commands do not wait or run an exploit.
+DFU identity CPID 0x7000, BDID 0x08; guarded commands require N61AP A8 (CPID 0x7000, BDID 0x06) and a matching BootROM profile.
+No matching DFU device; guarded commands do not wait or run an exploit.
+DFU identity CPID 0x8000, BDID 0x00; guarded commands require N61AP A8 (CPID 0x7000, BDID 0x06) and a matching BootROM profile.
+No matching DFU device; guarded commands do not wait or run an exploit.
+DFU identity changed; refusing the command.
+No matching DFU device; guarded commands do not wait or run an exploit.
+RPC probe returned an invalid marker or return value.
+RPC probe returned an invalid marker or return value.
+USB_TIMEOUT must be an integer from 1 to UINT_MAX milliseconds.

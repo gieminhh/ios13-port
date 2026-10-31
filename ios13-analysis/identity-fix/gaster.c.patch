@@ -1,0 +1,76 @@
+--- before/gaster.c
++++ after/gaster.c
+@@ -565,6 +565,39 @@
+ 		str[sz - 1] = '\0';
+ 	}
+ 	return str;
++}
++
++static bool
++parse_usb_serial_hex_field(const char *serial, const char *field, uint16_t *value) {
++	const size_t field_len = strlen(field);
++	bool found = false;
++	uint16_t result = 0;
++
++	/* DFU identity fields are space-delimited, unsigned hexadecimal tokens.
++	 * Reject missing, malformed, overflowing and duplicate identity fields. */
++	while(*serial != '\0') {
++		const char *end;
++		while(*serial == ' ') ++serial;
++		end = strchr(serial, ' ');
++		if(end == NULL) end = serial + strlen(serial);
++		if((size_t)(end - serial) >= field_len && strncmp(serial, field, field_len) == 0) {
++			const char *digit = serial + field_len;
++			if(found || digit == end) return false;
++			for(; digit < end; ++digit) {
++				unsigned n;
++				if(*digit >= '0' && *digit <= '9') n = (unsigned)(*digit - '0');
++				else if(*digit >= 'a' && *digit <= 'f') n = (unsigned)(*digit - 'a') + 10U;
++				else if(*digit >= 'A' && *digit <= 'F') n = (unsigned)(*digit - 'A') + 10U;
++				else return false;
++				if(result > (UINT16_MAX - n) / 16U) return false;
++				result = (uint16_t)(result * 16U + n);
++			}
++			found = true;
++		}
++		serial = end;
++	}
++	if(found) *value = result;
++	return found;
+ }
+ 
+ static bool
+@@ -867,12 +900,21 @@
+ 			usb_serial_number_string_descriptor = 0x18000082A;
+ 		}
+ 		if(cpid != 0) {
+-			printf("CPID: 0x%" PRIX32 "\n", cpid);
++			if(require_pwned) {
++				printf("BootROM profile CPID (from SRTG): 0x%" PRIX32 "\n", cpid);
++			} else {
++				printf("CPID: 0x%" PRIX32 "\n", cpid);
++			}
+ 			*(bool *)pwned = strstr(usb_serial_num, pwnd_str) != NULL;
+ 			ret = true;
+ 			if(require_pwned) {
+-				if(cpid != 0x7000 || strncmp(usb_serial_num, "CPID:7000 ", 10) != 0 || strstr(usb_serial_num, " BDID:00 ") == NULL) {
+-					fputs("Guarded commands require the N61AP A8 target (CPID 7000, BDID 00).\n", stderr);
++				uint16_t serial_cpid, bdid;
++				if(!parse_usb_serial_hex_field(usb_serial_num, "CPID:", &serial_cpid) || !parse_usb_serial_hex_field(usb_serial_num, "BDID:", &bdid)) {
++					fputs("Invalid DFU identity: CPID/BDID must each occur once as unsigned hex fields.\n", stderr);
++					ret = false;
++				} else if(cpid != 0x7000 || serial_cpid != cpid || bdid != 0x06) {
++					/* libirecovery maps iPhone7,2/n61ap to CPID 7000, BDID 06. */
++					fprintf(stderr, "DFU identity CPID 0x%04X, BDID 0x%02X; guarded commands require N61AP A8 (CPID 0x7000, BDID 0x06) and a matching BootROM profile.\n", (unsigned)serial_cpid, (unsigned)bdid);
+ 					ret = false;
+ 				} else if(command_serial_number != NULL && strcmp(command_serial_number, usb_serial_num) != 0) {
+ 					fputs("DFU identity changed; refusing the command.\n", stderr);
+@@ -886,6 +928,8 @@
+ 					}
+ 				}
+ 			}
++		} else if(require_pwned) {
++			fputs("Unsupported DFU BootROM profile (SRTG); refusing the command.\n", stderr);
+ 		}
+ 		free(usb_serial_num);
+ 	}

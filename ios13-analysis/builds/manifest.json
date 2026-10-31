@@ -1,0 +1,42 @@
+{
+  "base_commit": "20958256a4706b6396e2d9ee9ca742618459980b",
+  "compiler": "GCC 15.2.0 locally extracted; no system install",
+  "variants": {
+    "baseline": {
+      "source_sha256": "814f57d1d09819396877a57da7507843dbed4e29e2aaa9d04fa5f53faf4424df",
+      "binary": "/home/ubuntu/ios13-analysis/builds/variants/baseline/gaster.elf",
+      "sha256": "7d0ee8a1ccecbe5157e27017c3eac7034de0d507022ba46670af966f2e5c3551",
+      "size": 47040,
+      "executed_against_device": false,
+      "compile_command": "/home/ubuntu/ios13-analysis/builds/variants/baseline/compile-command.json",
+      "compile_log": "/home/ubuntu/ios13-analysis/builds/variants/baseline/compile.log"
+    },
+    "reset-only": {
+      "source_sha256": "71d2875e884149341414370036fda7513c53e5287da5bd27a970bd1fa2a5169b",
+      "binary": "/home/ubuntu/ios13-analysis/builds/variants/reset-only/gaster.elf",
+      "sha256": "86b8ed02d5eb6d6644d129f387034e58ed3d2198cae8fa24d674073e5edde56d",
+      "size": 47040,
+      "executed_against_device": false,
+      "compile_command": "/home/ubuntu/ios13-analysis/builds/variants/reset-only/compile-command.json",
+      "compile_log": "/home/ubuntu/ios13-analysis/builds/variants/reset-only/compile.log"
+    },
+    "timeout-only": {
+      "source_sha256": "196422a686f3e743bf9c5ae6b2572b69466754818fd668dc5caf9a487857f1ef",
+      "binary": "/home/ubuntu/ios13-analysis/builds/variants/timeout-only/gaster.elf",
+      "sha256": "1b13411a9b2a7b7e3fe8981fae7fca2441700c1f4c6a32536f5996aaccea5f13",
+      "size": 47040,
+      "executed_against_device": false,
+      "compile_command": "/home/ubuntu/ios13-analysis/builds/variants/timeout-only/compile-command.json",
+      "compile_log": "/home/ubuntu/ios13-analysis/builds/variants/timeout-only/compile.log"
+    },
+    "diagnostic": {
+      "source_sha256": "a295ed1916d9ed0a2130549a9425e21f36ae8fc73c7d5c253a57711cc2889494",
+      "binary": "/home/ubuntu/ios13-analysis/builds/gaster-diagnostic",
+      "sha256": "b8c2998d7a38c6b8406c4fdf231c5780e91808c6cf99aee5245d5134ade4ad47",
+      "size": 47624,
+      "executed_against_device": false,
+      "compile_command": "/home/ubuntu/ios13-analysis/builds/variants/diagnostic/compile-command.json",
+      "compile_log": "/home/ubuntu/ios13-analysis/builds/variants/diagnostic/compile.log"
+    }
+  }
+}

@@ -1,0 +1,36 @@
+--- a/gaster.c
++++ b/gaster.c
+@@ -187,6 +187,15 @@
+ #endif
+ }
+ 
++static unsigned
++usb_control_request_timeout(uint8_t bm_request_type, uint8_t b_request, uint16_t w_value, uint16_t w_index) {
++	/* Command execution completes before the payload starts the IN transfer. */
++	if(bm_request_type == 0xA1 && b_request == 2 && w_value == 0xFFFF && w_index == 0) {
++		return usb_timeout < 5000U ? 5000U : usb_timeout;
++	}
++	return usb_timeout;
++}
++
+ #ifdef HAVE_LIBUSB
+ static void
+ close_usb_handle(usb_handle_t *handle) {
+@@ -224,7 +233,7 @@
+ 
+ static bool
+ send_usb_control_request(const usb_handle_t *handle, uint8_t bm_request_type, uint8_t b_request, uint16_t w_value, uint16_t w_index, void *p_data, size_t w_len, transfer_ret_t *transfer_ret) {
+-	int ret = libusb_control_transfer(handle->device, bm_request_type, b_request, w_value, w_index, p_data, (uint16_t)w_len, usb_timeout);
++	int ret = libusb_control_transfer(handle->device, bm_request_type, b_request, w_value, w_index, p_data, (uint16_t)w_len, usb_control_request_timeout(bm_request_type, b_request, w_value, w_index));
+ 
+ 	if(transfer_ret != NULL) {
+ 		if(ret >= 0) {
+@@ -419,7 +428,7 @@
+ 	req.wLength = OSSwapLittleToHostInt16(w_len);
+ 	req.wValue = OSSwapLittleToHostInt16(w_value);
+ 	req.wIndex = OSSwapLittleToHostInt16(w_index);
+-	req.completionTimeout = req.noDataTimeout = usb_timeout;
++	req.completionTimeout = req.noDataTimeout = usb_control_request_timeout(bm_request_type, b_request, w_value, w_index);
+ 	ret = (*handle->device)->DeviceRequestTO(handle->device, &req);
+ 	if(transfer_ret != NULL) {
+ 		if(ret == kIOReturnSuccess) {

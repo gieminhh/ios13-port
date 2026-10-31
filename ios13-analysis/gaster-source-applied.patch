@@ -1,0 +1,384 @@
+diff --git a/gaster.c b/gaster.c
+index 670d3e7..9944c0a 100644
+--- a/gaster.c
++++ b/gaster.c
+@@ -13,6 +13,10 @@
+  * limitations under the License.
+  */
+ #include "lzfse.h"
++#include <errno.h>
++#include <limits.h>
++#include <stdlib.h>
++#include <time.h>
+ #ifdef HAVE_LIBUSB
+ #	include <libusb-1.0/libusb.h>
+ #	include <openssl/evp.h>
+@@ -151,6 +155,8 @@ extern unsigned payload_A9_bin_len, payload_notA9_bin_len, payload_notA9_armv7_b
+ 
+ static uint16_t cpid;
+ static unsigned usb_timeout;
++static bool require_pwned, usb_trace;
++static char *command_serial_number;
+ static uint32_t payload_dest_armv7;
+ static const char *pwnd_str = " PWND:[checkm8]";
+ static der_item_spec_t der_img4_item_specs[] = {
+@@ -187,6 +193,15 @@ sleep_ms(unsigned ms) {
+ #endif
+ }
+ 
++static unsigned
++usb_control_request_timeout(uint8_t bm_request_type, uint8_t b_request, uint16_t w_value, uint16_t w_index) {
++	/* Command execution completes before the payload starts the IN transfer. */
++	if(bm_request_type == 0xA1 && b_request == 2 && w_value == 0xFFFF && w_index == 0) {
++		return usb_timeout < 5000U ? 5000U : usb_timeout;
++	}
++	return usb_timeout;
++}
++
+ #ifdef HAVE_LIBUSB
+ static void
+ close_usb_handle(usb_handle_t *handle) {
+@@ -205,12 +220,27 @@ wait_usb_handle(usb_handle_t *handle, usb_check_cb_t usb_check_cb, void *arg) {
+ 		printf("[libusb] Waiting for the USB handle with VID: 0x%" PRIX16 ", PID: 0x%" PRIX16 "\n", handle->vid, handle->pid);
+ 		for(;;) {
+ 			if((handle->device = libusb_open_device_with_vid_pid(NULL, handle->vid, handle->pid)) != NULL) {
+-				if(libusb_set_configuration(handle->device, 1) == LIBUSB_SUCCESS && (usb_check_cb == NULL || usb_check_cb(handle, arg))) {
++				bool ready;
++				int configuration = 0;
++
++				if(require_pwned) {
++					/* Preserve the current DFU session; do not issue SET_CONFIGURATION. */
++					ready = usb_check_cb != NULL && usb_check_cb(handle, arg) && libusb_get_configuration(handle->device, &configuration) == LIBUSB_SUCCESS && configuration == 1;
++				} else {
++					ready = libusb_set_configuration(handle->device, 1) == LIBUSB_SUCCESS && (usb_check_cb == NULL || usb_check_cb(handle, arg));
++				}
++				if(ready) {
+ 					puts("Found the USB handle.");
+ 					return true;
+ 				}
+ 				libusb_close(handle->device);
+ 			}
++			if(require_pwned) {
++				fputs("No matching DFU device; guarded commands do not wait or run an exploit.\n", stderr);
++				libusb_exit(NULL);
++				handle->device = NULL;
++				return false;
++			}
+ 			sleep_ms(usb_timeout);
+ 		}
+ 	}
+@@ -222,11 +252,30 @@ usb_async_cb(struct libusb_transfer *transfer) {
+ 	*(int *)transfer->user_data = 1;
+ }
+ 
++static uint64_t
++monotonic_us(void) {
++	struct timespec ts;
++
++	if(clock_gettime(CLOCK_MONOTONIC, &ts) != 0) {
++		return 0;
++	}
++	return (uint64_t)ts.tv_sec * 1000000U + (uint64_t)ts.tv_nsec / 1000U;
++}
++
+ static bool
+ send_usb_control_request(const usb_handle_t *handle, uint8_t bm_request_type, uint8_t b_request, uint16_t w_value, uint16_t w_index, void *p_data, size_t w_len, transfer_ret_t *transfer_ret) {
+-	int ret = libusb_control_transfer(handle->device, bm_request_type, b_request, w_value, w_index, p_data, (uint16_t)w_len, usb_timeout);
++	unsigned timeout_ms = usb_control_request_timeout(bm_request_type, b_request, w_value, w_index);
++	uint64_t started = usb_trace ? monotonic_us() : 0;
++	int ret = libusb_control_transfer(handle->device, bm_request_type, b_request, w_value, w_index, p_data, (uint16_t)w_len, timeout_ms);
++
++	if(usb_trace) {
++		uint64_t ended = monotonic_us();
++
++		fprintf(stderr, "USB %02X/%02X value=%04X index=%04X length=%zu timeout=%u ms result=%d (%s) elapsed=%.3f ms\n", bm_request_type, b_request, w_value, w_index, w_len, timeout_ms, ret, ret < 0 ? libusb_error_name(ret) : "OK", started != 0 && ended >= started ? (double)(ended - started) / 1000.0 : -1.0);
++	}
+ 
+ 	if(transfer_ret != NULL) {
++		transfer_ret->sz = 0;
+ 		if(ret >= 0) {
+ 			transfer_ret->sz = (uint32_t)ret;
+ 			transfer_ret->ret = USB_TRANSFER_OK;
+@@ -378,8 +427,12 @@ wait_usb_handle(usb_handle_t *handle, usb_check_cb_t usb_check_cb, void *arg) {
+ 			if(ret) {
+ 				break;
+ 			}
+-			sleep_ms(usb_timeout);
+ 		}
++		if(require_pwned) {
++			fputs("No matching DFU device; guarded commands do not wait or run an exploit.\n", stderr);
++			break;
++		}
++		sleep_ms(usb_timeout);
+ 	}
+ 	return ret;
+ }
+@@ -419,9 +472,13 @@ send_usb_control_request(const usb_handle_t *handle, uint8_t bm_request_type, ui
+ 	req.wLength = OSSwapLittleToHostInt16(w_len);
+ 	req.wValue = OSSwapLittleToHostInt16(w_value);
+ 	req.wIndex = OSSwapLittleToHostInt16(w_index);
+-	req.completionTimeout = req.noDataTimeout = usb_timeout;
++	req.completionTimeout = req.noDataTimeout = usb_control_request_timeout(bm_request_type, b_request, w_value, w_index);
+ 	ret = (*handle->device)->DeviceRequestTO(handle->device, &req);
++	if(usb_trace) {
++		fprintf(stderr, "USB %02X/%02X value=%04X index=%04X length=%zu timeout=%u ms IOKit-result=0x%08" PRIX32 "\n", bm_request_type, b_request, w_value, w_index, w_len, usb_control_request_timeout(bm_request_type, b_request, w_value, w_index), (uint32_t)ret);
++	}
+ 	if(transfer_ret != NULL) {
++		transfer_ret->sz = 0;
+ 		if(ret == kIOReturnSuccess) {
+ 			transfer_ret->sz = req.wLenDone;
+ 			transfer_ret->ret = USB_TRANSFER_OK;
+@@ -501,8 +558,8 @@ get_usb_serial_number(usb_handle_t *handle) {
+ 	char *str = NULL;
+ 	size_t i, sz;
+ 
+-	if(send_usb_control_request(handle, 0x80, 6, 1U << 8U, 0, &device_descriptor, sizeof(device_descriptor), &transfer_ret) && transfer_ret.ret == USB_TRANSFER_OK && transfer_ret.sz == sizeof(device_descriptor) && send_usb_control_request(handle, 0x80, 6, (3U << 8U) | device_descriptor.i_serial_number, 0x409, buf, sizeof(buf), &transfer_ret) && transfer_ret.ret == USB_TRANSFER_OK && transfer_ret.sz == buf[0] && (sz = buf[0] / 2) != 0 && (str = malloc(sz)) != NULL) {
+-		for(i = 0; i < sz; ++i) {
++	if(send_usb_control_request(handle, 0x80, 6, 1U << 8U, 0, &device_descriptor, sizeof(device_descriptor), &transfer_ret) && transfer_ret.ret == USB_TRANSFER_OK && transfer_ret.sz == sizeof(device_descriptor) && send_usb_control_request(handle, 0x80, 6, (3U << 8U) | device_descriptor.i_serial_number, 0x409, buf, sizeof(buf), &transfer_ret) && transfer_ret.ret == USB_TRANSFER_OK && transfer_ret.sz >= 2 && buf[1] == 3 && (buf[0] & 1U) == 0 && transfer_ret.sz == buf[0] && (sz = buf[0] / 2) != 0 && (str = malloc(sz)) != NULL) {
++		for(i = 0; i + 1 < sz; ++i) {
+ 			str[i] = (char)buf[2 * (i + 1)];
+ 		}
+ 		str[sz - 1] = '\0';
+@@ -515,6 +572,9 @@ checkm8_check_usb_device(usb_handle_t *handle, void *pwned) {
+ 	char *usb_serial_num = get_usb_serial_number(handle);
+ 	bool ret = false;
+ 
++	cpid = 0;
++	config_hole = config_large_leak = config_overwrite_pad = 0;
++	*(bool *)pwned = false;
+ 	if(usb_serial_num != NULL) {
+ 		if(strstr(usb_serial_num, " SRTG:[iBoot-1145.3]") != NULL) {
+ 			cpid = 0x8950;
+@@ -587,7 +647,7 @@ checkm8_check_usb_device(usb_handle_t *handle, void *pwned) {
+ 			gUSBSerialNumber = 0x180088E48;
+ 			dfu_handle_request = 0x180088DF8;
+ 			usb_core_do_transfer = 0x100011BB4;
+-			dfu_handle_bus_reset = 0x180088E28;
++			dfu_handle_bus_reset = 0x180088E18;
+ 			insecure_memory_base = 0x180380000;
+ 			handle_interface_request = 0x100011EE4;
+ 			usb_create_string_descriptor = 0x100011074;
+@@ -602,7 +662,7 @@ checkm8_check_usb_device(usb_handle_t *handle, void *pwned) {
+ 			gUSBSerialNumber = 0x1800888C8;
+ 			dfu_handle_request = 0x180088878;
+ 			usb_core_do_transfer = 0x10000EBB4;
+-			dfu_handle_bus_reset = 0x1800888A8;
++			dfu_handle_bus_reset = 0x180088898;
+ 			insecure_memory_base = 0x180380000;
+ 			handle_interface_request = 0x10000EEE4;
+ 			usb_create_string_descriptor = 0x10000E074;
+@@ -810,6 +870,22 @@ checkm8_check_usb_device(usb_handle_t *handle, void *pwned) {
+ 			printf("CPID: 0x%" PRIX32 "\n", cpid);
+ 			*(bool *)pwned = strstr(usb_serial_num, pwnd_str) != NULL;
+ 			ret = true;
++			if(require_pwned) {
++				if(cpid != 0x7000 || strncmp(usb_serial_num, "CPID:7000 ", 10) != 0 || strstr(usb_serial_num, " BDID:00 ") == NULL) {
++					fputs("Guarded commands require the N61AP A8 target (CPID 7000, BDID 00).\n", stderr);
++					ret = false;
++				} else if(command_serial_number != NULL && strcmp(command_serial_number, usb_serial_num) != 0) {
++					fputs("DFU identity changed; refusing the command.\n", stderr);
++					ret = false;
++				} else if(*(bool *)pwned && command_serial_number == NULL) {
++					command_serial_number = malloc(strlen(usb_serial_num) + 1);
++					if(command_serial_number != NULL) {
++						strcpy(command_serial_number, usb_serial_num);
++					} else {
++						ret = false;
++					}
++				}
++			}
+ 		}
+ 		free(usb_serial_num);
+ 	}
+@@ -1259,6 +1335,11 @@ gaster_checkm8(usb_handle_t *handle) {
+ 	init_usb_handle(handle, APPLE_VID, DFU_MODE_PID);
+ 	while(stage != STAGE_PWNED && wait_usb_handle(handle, checkm8_check_usb_device, &pwned)) {
+ 		if(!pwned) {
++			if(require_pwned) {
++				fputs("Device is not marked pwned; no exploit or USB reset was attempted.\n", stderr);
++				close_usb_handle(handle);
++				return false;
++			}
+ 			if(stage == STAGE_RESET) {
+ 				puts("Stage: RESET");
+ 				ret = checkm8_stage_reset(handle);
+@@ -1285,7 +1366,7 @@ gaster_checkm8(usb_handle_t *handle) {
+ 			reset_usb_handle(handle);
+ 		} else {
+ 			stage = STAGE_PWNED;
+-			puts("Now you can boot untrusted images.");
++			puts(require_pwned ? "Found already-pwned N61AP; exploit/reset skipped." : "Now you can boot untrusted images.");
+ 		}
+ 		close_usb_handle(handle);
+ 	}
+@@ -1495,13 +1576,21 @@ static bool
+ gaster_command(usb_handle_t *handle, void *request_data, size_t request_len, uint8_t **response, size_t response_len) {
+ 	transfer_ret_t transfer_ret;
+ 	bool ret = false;
++	bool pwned = false;
+ 
+-	if(wait_usb_handle(handle, NULL, NULL)) {
++	*response = NULL;
++	if(wait_usb_handle(handle, require_pwned ? checkm8_check_usb_device : NULL, require_pwned ? &pwned : NULL)) {
++		if(require_pwned && !pwned) {
++			fputs("Pwned DFU state was lost; refusing the command.\n", stderr);
++			close_usb_handle(handle);
++			return false;
++		}
+ 		if(dfu_send_data(handle, request_data, request_len) && (*response = malloc(response_len)) != NULL) {
+ 			if(send_usb_control_request(handle, 0xA1, 2, 0xFFFF, 0, *response, response_len, &transfer_ret) && transfer_ret.ret == USB_TRANSFER_OK && transfer_ret.sz == response_len) {
+ 				ret = true;
+ 			} else {
+ 				free(*response);
++				*response = NULL;
+ 			}
+ 		}
+ 		close_usb_handle(handle);
+@@ -1509,6 +1598,31 @@ gaster_command(usb_handle_t *handle, void *request_data, size_t request_len, uin
+ 	return ret;
+ }
+ 
++static bool
++gaster_probe(usb_handle_t *handle) {
++	uint64_t request[5] = { MEMC_MAGIC, 0, 0, 0, 0 }, result[2];
++	uint8_t *response;
++	bool ret;
++
++	if(!gaster_checkm8(handle)) {
++		return false;
++	}
++	/* Exercise the RPC without invoking AES or copying any payload bytes. */
++	request[2] = request[3] = insecure_memory_base + sizeof(result);
++	if(!gaster_command(handle, request, sizeof(request), &response, sizeof(result))) {
++		return false;
++	}
++	memcpy(result, response, sizeof(result));
++	free(response);
++	ret = result[0] == DONE_MAGIC && result[1] == request[2];
++	if(ret) {
++		puts("RPC probe succeeded (DONE_MAGIC, zero-length memcpy); AES was not executed.");
++	} else {
++		fputs("RPC probe returned an invalid marker or return value.\n", stderr);
++	}
++	return ret;
++}
++
+ static bool
+ gaster_aes(usb_handle_t *handle, uint32_t cmd, const uint8_t *src, uint8_t *dst, size_t len, uint32_t options) {
+ 	struct {
+@@ -1579,17 +1693,29 @@ gaster_decrypt(usb_handle_t *handle, const uint8_t *src, size_t src_len, uint8_t
+ 	return img4_init(src, src_len, &img4) && img4_get_kbag(img4, kbag) && gaster_aes(handle, AES_CMD_CBC | AES_CMD_DEC, kbag, kbag, sizeof(kbag), AES_KEY_SZ_256 | AES_KEY_TYPE_GID0) && img4_decrypt(img4, kbag, dst, dst_len);
+ }
+ 
++static int
++hex_nibble(char c) {
++	if(c >= '0' && c <= '9') return c - '0';
++	if(c >= 'a' && c <= 'f') return c - 'a' + 10;
++	if(c >= 'A' && c <= 'F') return c - 'A' + 10;
++	return -1;
++}
++
+ static bool
+ gaster_decrypt_kbag(usb_handle_t *handle, const char *kbag_str) {
+ 	uint8_t kbag[AES_BLOCK_SZ + AES_KEY_SZ_BYTES_256];
+ 	bool ret = false;
+ 	size_t i;
++	int high, low;
+ 
+ 	if(strlen(kbag_str) == 2 * sizeof(kbag)) {
+ 		for(i = 0; i < sizeof(kbag); ++i) {
+-			if(sscanf(&kbag_str[2 * i], "%02" SCNx8, &kbag[i]) != 1) {
++			high = hex_nibble(kbag_str[2 * i]);
++			low = hex_nibble(kbag_str[2 * i + 1]);
++			if(high < 0 || low < 0) {
+ 				break;
+ 			}
++			kbag[i] = (uint8_t)((high << 4) | low);
+ 		}
+ 		if(i == sizeof(kbag) && gaster_checkm8(handle) && gaster_aes(handle, AES_CMD_CBC | AES_CMD_DEC, kbag, kbag, sizeof(kbag), AES_KEY_SZ_256 | AES_KEY_TYPE_GID0)) {
+ 			printf("IV: ");
+@@ -1639,17 +1765,43 @@ gaster_reset(usb_handle_t *handle) {
+ 	return false;
+ }
+ 
++static bool
++parse_usb_timeout(const char *str, unsigned *value) {
++	char *end;
++	unsigned long parsed;
++
++	if(str == NULL || *str < '0' || *str > '9') {
++		return false;
++	}
++	errno = 0;
++	parsed = strtoul(str, &end, 10);
++	if(errno == ERANGE || *end != '\0' || parsed == 0 || parsed > UINT_MAX) {
++		return false;
++	}
++	*value = (unsigned)parsed;
++	return true;
++}
++
+ int
+ main(int argc, char **argv) {
+ 	char *env_usb_timeout = getenv("USB_TIMEOUT");
++	const char *env_usb_trace = getenv("GASTER_USB_TRACE");
+ 	int ret = EXIT_FAILURE;
+ 	usb_handle_t handle;
+ 
+-	if(env_usb_timeout == NULL || sscanf(env_usb_timeout, "%u", &usb_timeout) != 1) {
+-		usb_timeout = 5;
++	usb_timeout = 5;
++	if(env_usb_timeout != NULL && !parse_usb_timeout(env_usb_timeout, &usb_timeout)) {
++		fputs("USB_TIMEOUT must be an integer from 1 to UINT_MAX milliseconds.\n", stderr);
++		return ret;
+ 	}
++	usb_trace = env_usb_trace != NULL && strcmp(env_usb_trace, "1") == 0;
++	require_pwned = (argc == 2 && strcmp(argv[1], "probe") == 0) || (argc == 3 && strcmp(argv[1], "decrypt_kbag_pwned") == 0);
+ 	printf("usb_timeout: %u\n", usb_timeout);
+-	if(argc == 2 && strcmp(argv[1], "reset") == 0) {
++	if(argc == 2 && strcmp(argv[1], "probe") == 0) {
++		if(gaster_probe(&handle)) {
++			ret = 0;
++		}
++	} else if(argc == 2 && strcmp(argv[1], "reset") == 0) {
+ 		if(gaster_reset(&handle)) {
+ 			ret = 0;
+ 		}
+@@ -1657,15 +1809,11 @@ main(int argc, char **argv) {
+ 		if(gaster_checkm8(&handle)) {
+ 			ret = 0;
+ 		}
+-	} else if(argc == 2 && strcmp(argv[1], "reset") == 0) {
+-		if(gaster_reset(&handle)) {
+-			ret = 0;
+-		}
+ 	} else if(argc == 4 && strcmp(argv[1], "decrypt") == 0) {
+ 		if(gaster_decrypt_file(&handle, argv[2], argv[3])) {
+ 			ret = 0;
+ 		}
+-	} else if(argc == 3 && strcmp(argv[1], "decrypt_kbag") == 0) {
++	} else if(argc == 3 && (strcmp(argv[1], "decrypt_kbag") == 0 || strcmp(argv[1], "decrypt_kbag_pwned") == 0)) {
+ 		if(gaster_decrypt_kbag(&handle, argv[2])) {
+ 			ret = 0;
+ 		}
+@@ -1674,12 +1822,19 @@ main(int argc, char **argv) {
+ 		printf("Usage: env %s options\n", argv[0]);
+ 		puts("env:");
+ 		puts("USB_TIMEOUT - USB timeout in ms");
++		puts("GASTER_USB_TRACE=1 - Trace setup packets, backend results and timing (no payload data)");
+ 		puts("options:");
+ 		puts("reset - Reset DFU state");
+ 		puts("pwn - Put the device in pwned DFU mode");
+-		puts("reset - Reset dfu usb");
+ 		puts("decrypt src dst - Decrypt file using GID0 AES key");
+ 		puts("decrypt_kbag kbag - Decrypt KBAG using GID0 AES key");
++		puts("probe - Probe the RPC on an already-pwned N61AP; no automatic exploit/reset");
++		puts("decrypt_kbag_pwned kbag - Decrypt KBAG on an already-pwned N61AP; no automatic exploit/reset");
++		if(argc == 2 && (strcmp(argv[1], "--help") == 0 || strcmp(argv[1], "-h") == 0)) {
++			ret = 0;
++		}
+ 	}
++	free(command_serial_number);
++	command_serial_number = NULL;
+ 	return ret;
+ }

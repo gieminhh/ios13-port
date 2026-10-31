@@ -1,0 +1,25 @@
+{
+  "production_builds": 4,
+  "build_flags": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror",
+    "-Os"
+  ],
+  "mock_cases_passed": 21,
+  "sanitizers": [
+    "AddressSanitizer",
+    "UndefinedBehaviorSanitizer"
+  ],
+  "real_libusb_linked_into_mock_tests": false,
+  "production_commands_run": [
+    "--help"
+  ],
+  "hardware_commands_run": [],
+  "original_gaster_binary_unchanged": true,
+  "source_modified_with_user_permission": true,
+  "target_platform_tested": "Linux x86_64 / HAVE_LIBUSB",
+  "macos_iokit_compile_tested": false,
+  "payload_bins_modified": false
+}

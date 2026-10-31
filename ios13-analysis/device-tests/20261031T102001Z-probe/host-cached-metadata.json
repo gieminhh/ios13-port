@@ -1,0 +1,11 @@
+[
+  {
+    "host_cached_path": "/sys/bus/usb/devices/1-4",
+    "pid": "1227",
+    "prefix": "CPID:7000 ",
+    "CPID": "7000",
+    "BDID": "06",
+    "SRTG": "iBoot-1992.0.0.1.19",
+    "pwned": false
+  }
+]

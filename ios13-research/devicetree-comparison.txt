@@ -1,0 +1,177 @@
+=== DEVICE TREE COMPARISON ===
+N61AP nodes: 147
+J96AP nodes: 168
+Common nodes: 113
+Only N61AP: 34
+Only J96AP: 55
+Nodes with changed properties: 47
+
+=== ONLY N61AP ===
+/device-tree/arm-io/i2c0/display-pmu
+/device-tree/arm-io/i2c0/lm3534
+/device-tree/arm-io/i2c1
+/device-tree/arm-io/i2c1/audio-speaker
+/device-tree/arm-io/i2c1/lm3534-1
+/device-tree/arm-io/i2c1/mesa-eeprom
+/device-tree/arm-io/i2c1/tigris
+/device-tree/arm-io/i2c1/vib-pwm
+/device-tree/arm-io/i2c1/vib-pwm/vibrator
+/device-tree/arm-io/i2c2/als
+/device-tree/arm-io/i2c2/display-eeprom
+/device-tree/arm-io/mca1/audio-bluetooth
+/device-tree/arm-io/mca2/audio-codec-reference
+/device-tree/arm-io/mca2/audio-speaker
+/device-tree/arm-io/mca3/audio-baseband-voice
+/device-tree/arm-io/mca4
+/device-tree/arm-io/mca4/audio-codec-voice
+/device-tree/arm-io/mipi-dsim
+/device-tree/arm-io/mipi-dsim/lcd
+/device-tree/arm-io/spi1/audio-codec
+/device-tree/arm-io/spi2/multi-touch
+/device-tree/arm-io/uart2/debug
+/device-tree/arm-io/uart3/stockholm
+/device-tree/arm-io/uart4/wlan
+/device-tree/arm-io/uart8
+/device-tree/arm-io/uart8/oscar
+/device-tree/arm-io/uart8/oscar/accelerometer
+/device-tree/arm-io/uart8/oscar/cma
+/device-tree/arm-io/uart8/oscar/compass
+/device-tree/arm-io/uart8/oscar/gyro
+/device-tree/arm-io/uart8/oscar/pressure
+/device-tree/arm-io/usb-complex/usb-ehci2
+/device-tree/arm-io/usb-complex/usb-ehci2/hsic-baseband
+/device-tree/baseband
+
+=== ONLY J96AP ===
+/device-tree/arm-io/displayport
+/device-tree/arm-io/displayport/lcd
+/device-tree/arm-io/i2c0/lp8559
+/device-tree/arm-io/i2c2/audio-speaker0
+/device-tree/arm-io/i2c2/audio-speaker1
+/device-tree/arm-io/i2c3
+/device-tree/arm-io/i2c3/als1
+/device-tree/arm-io/i2c3/als2
+/device-tree/arm-io/lpdp-phy
+/device-tree/arm-io/mca1/audio-speaker0
+/device-tree/arm-io/mca2/audio-codec-voice
+/device-tree/arm-io/mca3/audio-bluetooth
+/device-tree/arm-io/pwm/grape-clk
+/device-tree/arm-io/spi1/multi-touch
+/device-tree/arm-io/spi2/audio-codec
+/device-tree/arm-io/uart2/wlan
+/device-tree/arm-io/uart3/debug
+/device-tree/arm-io/uart4/stockholm
+/device-tree/arm-io/uart7
+/device-tree/arm-io/uart7/oscar
+/device-tree/arm-io/uart7/oscar/accelerometer
+/device-tree/arm-io/uart7/oscar/cma
+/device-tree/arm-io/uart7/oscar/compass
+/device-tree/arm-io/uart7/oscar/gyro
+/device-tree/arm-io/uart7/oscar/pressure
+/device-tree/filesystems
+/device-tree/filesystems/fstab
+/device-tree/filesystems/fstab-ephemeral-diag-data
+/device-tree/filesystems/fstab-ephemeral-diag-data/ephemeral-diag-data-vol
+/device-tree/filesystems/fstab-ephemeral-diag-data/update-vol
+/device-tree/filesystems/fstab-ephemeral-recovery-data
+/device-tree/filesystems/fstab-ephemeral-recovery-data/ephemeral-recovery-data-vol
+/device-tree/filesystems/fstab/data-vol
+/device-tree/filesystems/fstab/system-vol
+/device-tree/filesystems/fstab/update-vol
+/device-tree/osenvironments
+/device-tree/osenvironments/darwinos-ramdisk-environment
+/device-tree/osenvironments/darwinos-ramdisk-environment/ephemeral-recovery-data-volume
+/device-tree/osenvironments/darwinos-ramdisk-environment/ephemeral-storage
+/device-tree/osenvironments/darwinos-ramdisk-environment/no-protected-data-access
+/device-tree/osenvironments/darwinos-ramdisk-environment/no-sepfw-load-at-boot
+/device-tree/osenvironments/diagnostics-environment
+/device-tree/osenvironments/diagnostics-environment/disable-transport-rm
+/device-tree/osenvironments/diagnostics-environment/ephemeral-diag-data-volume
+/device-tree/osenvironments/diagnostics-environment/ephemeral-storage
+/device-tree/osenvironments/diagnostics-environment/no-protected-data-access
+/device-tree/osenvironments/recovery-environment
+/device-tree/osenvironments/recovery-environment/amfi-allows-trust-cache-load
+/device-tree/osenvironments/recovery-environment/disable-accessory-firmware
+/device-tree/osenvironments/recovery-environment/disable-av-content-protection
+/device-tree/osenvironments/recovery-environment/ephemeral-recovery-data-volume
+/device-tree/osenvironments/recovery-environment/ephemeral-storage
+/device-tree/osenvironments/recovery-environment/no-protected-data-access
+/device-tree/osenvironments/recovery-environment/no-sepfw-load-at-boot
+/device-tree/osenvironments/recovery-environment/use-recovery-securityd
+
+=== N61 HARDWARE CANDIDATES ===
+/device-tree/arm-io/i2c0/display-pmu
+/device-tree/arm-io/i2c1/audio-speaker
+/device-tree/arm-io/i2c1/vib-pwm/vibrator
+/device-tree/arm-io/i2c2/display-eeprom
+/device-tree/arm-io/mca1/audio-bluetooth
+/device-tree/arm-io/mca2/audio-codec-reference
+/device-tree/arm-io/mca2/audio-speaker
+/device-tree/arm-io/mca3/audio-baseband-voice
+/device-tree/arm-io/mca4/audio-codec-voice
+/device-tree/arm-io/mipi-dsim/lcd
+/device-tree/arm-io/spi1/audio-codec
+/device-tree/arm-io/spi2/multi-touch
+
+=== J96 HARDWARE CANDIDATES ===
+/device-tree/arm-io/displayport
+/device-tree/arm-io/displayport/lcd
+/device-tree/arm-io/i2c2/audio-speaker0
+/device-tree/arm-io/i2c2/audio-speaker1
+/device-tree/arm-io/mca1/audio-speaker0
+/device-tree/arm-io/mca2/audio-codec-voice
+/device-tree/arm-io/mca3/audio-bluetooth
+/device-tree/arm-io/spi1/multi-touch
+/device-tree/arm-io/spi2/audio-codec
+/device-tree/osenvironments/darwinos-ramdisk-environment/ephemeral-storage
+/device-tree/osenvironments/diagnostics-environment/ephemeral-storage
+/device-tree/osenvironments/recovery-environment/ephemeral-storage
+
+=== COMMON NODES WITH CHANGED PROPERTIES ===
+/device-tree: model, compatible, target-type
+/device-tree/arm-io/ans: reg, pc-sample-offset, clock-gates, ps-reg-offset, debug-ps-clock-gate
+/device-tree/arm-io/apcie: phy0-settings
+/device-tree/arm-io/apcie/pci-bridge1: function-device_wake, function-dart_force_active
+/device-tree/arm-io/apcie/pci-bridge1/wlan: acpie-l1ss-workaround, iommu-parent, compatible
+/device-tree/arm-io/ave: iommu-parent
+/device-tree/arm-io/dart-ave: iommu-parent
+/device-tree/arm-io/disp0: iommu-parent, function-lcd_enable
+/device-tree/arm-io/disp1: iommu-parent
+/device-tree/arm-io/i2c0/pmu: function-keepact, event_name-gpio13, location-id-tdev1, event_name-gpio11, location-id-tdev8, reg, event_name-gpio16, event_name-gpio9, location-tdev7, location-tdev4, event_name-gpio8, location-id-tdev7, compatible, location-tdev5, function-get_vbus_detect, interrupts, event_name-gpio12, location-id-tdev4, event_name-gpio2, event_name-gpio4, event_name-gpio7, event_name-gpio6, upo-shutdown-delay, location-tdev6, event_name-gpio10, location-id-tdev2, location-id-tdev5, event_name-gpio1, location-tdev1, location-id-tdev3, location-id-tdev6, location-tdev8, event_name-gpio5, location-tdev2, location-tdev3, wled-enables
+/device-tree/arm-io/i2c0/tristar: acc-ld-thres-acc-limit-dn2, acc-ld-thres-un-limit-dn2, acc-ld-thres-limit-dn1, function-brick_id_voltage, acc-ld-thres-acc-hi-dp1, acc-ld-thres-acc-hi-dn2, acc-ld-thres-un-lo-dn1, dock, acc-ld-thres-acc-lo-dp1, acc-ld-thres-hi-dp2, acc-ld-thres-lo-dp1, acc-ld-thres-hi-dp1, acc-ld-thres-acc-hi-dn1, acc-ld-thres-acc-lo-dn2, acc-ld-thres-hi-dn1, allow-brick_id_aux, acc-ld-thres-un-hi-dp2, acc-ld-thres-hi-dn2, acc-ld-thres-leakage, acc-ld-thres-un-hi-dn2, interrupts, acc-ld-thres-un-hi-dn1, acc-ld-thres-un-lo-dp1, acc-ld-thres-acc-lo-dn1, acc-ld-thres-un-limit-dp2, acc-ld-thres-limit-dn2, acc-ld-thres-limit-dp1, acc-ld-thres-limit-dp2, acc-ld-thres-un-limit-dp1, acc-ld-thres-lo-dn2, acc-ld-thres-acc-lo-dp2, acc-ld-thres-lo-dn1, acc-ld-thres-acc-limit-dn1, acc-ld-thres-un-lo-dp2, acc-ld-thres-un-lo-dn2, acc-ld-thres-lo-dp2, acc-ld-thres-un-hi-dp1, acc-ld-thres-acc-limit-dp1, acc-ld-thres-acc-limit-dp2, acc-ld-thres-acc-hi-dp2, acc-ld-thres-un-limit-dn1
+/device-tree/arm-io/isp: sensor-type, function-torch_enable, function-saca1c, iommu-parent, function-saca1, function-saca0b, function-saca0c, function-saca0, function-focus_ldo, function-saca1b, function-cam_avdd_ldo
+/device-tree/arm-io/jpeg: iommu-parent
+/device-tree/arm-io/mca0: dma-parent, function-i2s_route
+/device-tree/arm-io/mca0/audio-codec: function-clock_src_baseband, compatible, reg, function-clock_src_system
+/device-tree/arm-io/mca1: dma-parent, function-i2s_route
+/device-tree/arm-io/mca2: dma-parent, function-i2s_route
+/device-tree/arm-io/mca3: dma-parent, function-i2s_route
+/device-tree/arm-io/mcc: config-data
+/device-tree/arm-io/pmgr: function-disable_temp
+/device-tree/arm-io/pmgr/clpc: external-droop-util-target, external-droop-util-ki-down, external-droop-util-ki-up, function-set_droop_util_ce, real-time-utilization-target, external-droop-util-control
+/device-tree/arm-io/pmgr/soc-tuner: function-dispidle_ctrl
+/device-tree/arm-io/scaler0: iommu-parent
+/device-tree/arm-io/sep/iop-sep-nub: rom-panic-bytes
+/device-tree/arm-io/sgx: gpu-pwr-perf-scale3, gpu-pwr-perf-scale2, gpu-pwr-perf-scale4, gpu-device-max-power
+/device-tree/arm-io/spi1: dma-channels, dma-parent
+/device-tree/arm-io/spi2: dma-parent
+/device-tree/arm-io/spi3: dma-parent
+/device-tree/arm-io/spi3/mesa: function-mesa_pwr, function-bb_gpio, function-hid_event_dispatch
+/device-tree/arm-io/uart1: dma-parent
+/device-tree/arm-io/uart1/bluetooth: function-power_enable, function-bt_wake
+/device-tree/arm-io/uart2: function-rts, dma-channels, dma-parent, function-tx, dma-types
+/device-tree/arm-io/uart3: function-rts, dma-channels, dma-parent, function-tx, dma-types
+/device-tree/arm-io/uart4: dma-parent
+/device-tree/arm-io/uart5/gas-gauge: function-log_shutdown_rsn, function-log_shutdown_rsn2, critical-flag-delay, function-battery_swi_request, battery-id-block, function-log_shutdown_dlog, posm-vac-levels, posm-threshold, update-sample-config
+/device-tree/arm-io/uart6/iap: function-dock_parent
+/device-tree/arm-io/usb-complex/usb-device: product-version, function-usb_500_100, product-string, function-dock_parent, product-id
+/device-tree/backlight: function-backlight_enable, LmaxProduct, LminProduct, milliAmps2DACTablePart2, nits2mAmps0thOrderCoef, iDAC2MilliAmpsTable, nits2mAmps2ndOrderCoef, backlight-marketing-table, mA2Nits2ndOrderCoef, function-backlight_enable1, function-disp_aap_ctrl, calibratedMidCurrent, milliAmps2DACTablePart1, mA2Nits1stOrderCoef, nits2mAmps1stOrderCoef, dual-backlight-controllers, mA2Nits0thOrderCoef, milliAmps2DACPart2MaxCurrent, calibratedMaxCurrent
+/device-tree/buttons: function-button_halleffect1, button-debounce-off_ringerab, opposed-power-vol-buttons, function-wake_button_hold, interrupt-parent, button-priority_voldown, button-delay_voldown, function-button_ringerab, button-priority_volup, button-delay_hold, function-button_halleffect, button-names, function-wake_button_menu, button-delay_volup, interrupts, button-priority_hold
+/device-tree/charger: usb-input-limit-calibration, min-charge-capable-current, function-set_charger, ui-update-interval, function-tristar_current, charge-currents, compatible, penalty-box-soc-uth, charger-sleep-interval, usb-input-limit-max, penalty-box-temp-lth, function-dock_parent, charge-limits, penalty-box-enable, penalty-box-soc-lth, penalty-box-temp-uth
+/device-tree/chosen: protected-data-access, max-env-var-data-size, display-boot-rotation, ephemeral-storage, disable-transport-rm, use-recovery-securityd, osenvironment, max-env-var-name-size, disable-av-content-protection, disable-accessory-firmware, max-env-partition, amfi-only-platform-code, sepfw-load-at-boot, amfi-allows-trust-cache-load
+/device-tree/defaults: kern.secluded_mem_mb, kern.maxvnodes, kern.max_task_pmem
+/device-tree/dock: function-acc_pwr, function-vbus_voltage, function-acc_sw_en, function-acc_sleep_pwr
+/device-tree/product: device-perf-memory-class, low-power-wallet-mode, wifi-chipset, graphics-featureset-class, cover-glass, mobiledevice-beta-min-ver, car-integration, compatible-device-fallback, product-name, peek-ui-width, location-reminders, product-id, artwork-device-subtype, watch-companion, product-description, baseband-chipset, ui-reachability, siri-gesture, artwork-device-idiom, personal-hotspot, hearingaid-audio-equalization, gps-capable, mobiledevice-min-ver, builtin-mics, graphics-featureset-fallbacks
+/device-tree/product/camera: rear-max-video-frame_rate, rear-auto-hdr, rear-max-slomo-video-fps-720p, rear-max-video-fps-1080p, video-stills, live-effects, camera-hdr-version, flash
+/device-tree/product/facetime: bitrate-3g, bitrate-lte, bitrate-2g, decoding
+/device-tree/product/maps: navigation

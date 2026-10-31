@@ -1,0 +1,75 @@
+{
+  "timestamp_utc": "2026-10-31T10:29:36.359203+00:00",
+  "source": "host-cached sysfs attributes; not fresh device control reads",
+  "apple_devices": [
+    {
+      "path": "/sys/bus/usb/devices/1-9:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-9:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-2:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-2:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-8:1.1",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-8:1.1/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/3-0:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/3-0:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-1:1.1",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-1:1.1/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-7:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-7:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/4-0:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/4-0:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-0:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-0:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-4:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-4:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/2-3:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/2-3:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-8:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-8:1.0/idVendor'"
+    },
+    {
+      "sysfs": "/sys/bus/usb/devices/1-4",
+      "idVendor": "05ac",
+      "idProduct": "1227",
+      "busnum": "1",
+      "devnum": "19",
+      "manufacturer": "Apple Inc.",
+      "product": "Apple Mobile Device (DFU Mode)",
+      "serial": "CPID:7000 CPRV:11 CPFM:03 SCEP:01 BDID:06 ECID:000C1440188A2026 IBFL:1C SRTG:[iBoot-1992.0.0.1.19]",
+      "bConfigurationValue": "1",
+      "bDeviceClass": "00",
+      "speed": "480"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-1:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-1:1.0/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/1-7:1.1",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/1-7:1.1/idVendor'"
+    },
+    {
+      "path": "/sys/bus/usb/devices/2-0:1.0",
+      "error": "[Errno 2] No such file or directory: '/sys/bus/usb/devices/2-0:1.0/idVendor'"
+    }
+  ]
+}

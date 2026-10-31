@@ -1,0 +1,21 @@
+{
+  "queried_utc": "2026-10-31T10:30:39.319147+00:00",
+  "index_url": "https://api.ipsw.me/v4/device/iPhone7,2?type=ipsw",
+  "source_is_third_party": true,
+  "note": "signed flag is metadata, not a successful Apple TSS response",
+  "firmwares": [
+    {
+      "identifier": "iPhone7,2",
+      "version": "12.5.8",
+      "buildid": "16H88",
+      "sha1sum": "316fc685e887f3dd41fa620f12ecd4ae1e0bdc35",
+      "md5sum": "7d973007b3fe39811e3bfcca48f7eaf8",
+      "sha256sum": "2f6f749bbfa9555cd0fa878258f34696863ebd661e0ecbf773cb37df1ac0862c",
+      "filesize": 3032495130,
+      "url": "https://updates.cdn-apple.com/2026WinterFCS/fullrestores/047-28352/B80B4A86-C206-4C4F-8D35-65579694AEE9/iPhone_4.7_12.5.8_16H88_Restore.ipsw",
+      "releasedate": "2026-01-26T18:21:55Z",
+      "uploaddate": "2026-01-22T00:48:01Z",
+      "signed": true
+    }
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "date_utc": "2026-10-31",
+  "identity_fix_cases": 47,
+  "current_mock_cases": 56,
+  "mock_test_exit_code": 0,
+  "asan_ubsan_exit_code": 0,
+  "production_compile_exit_code": 0,
+  "compiler": "GCC 15.2.0",
+  "warning_flags": [
+    "-Wall",
+    "-Wextra",
+    "-Wpedantic",
+    "-Werror"
+  ],
+  "source_sha256": "c461f59c2693ed189ceb724eb5a1a2053032565a0c7ef0b9cccc444f1553d494",
+  "tested_production_binary_sha256": "5cde4cc513d1eb71dbb99636fc18d1a4e3d7121a0c5099dbd0e5a71d2a3cb698",
+  "device_status_exit_code": 0,
+  "device_observations": {
+    "CPID": "0x7000",
+    "BDID": "0x06",
+    "board": "n61ap",
+    "model": "iPhone7,2",
+    "USB_VID": "0x05ac",
+    "USB_PID": "0x1227",
+    "configuration": 1,
+    "PWND_checkm8_marker": true,
+    "DFU_GETSTATE": 8,
+    "DFU_state_name": "dfuMANIFEST-WAIT-RESET"
+  },
+  "RPC_probe_executed_after_identity_fix": false,
+  "AES_executed_after_identity_fix": false,
+  "RAM_boot_executed": false,
+  "firmware_flash_executed": false,
+  "macOS_IOKit_build_tested": false,
+  "note": "Authorizations to perform one RPC probe and conditional native iBSS KBAG AES test were received; neither was executed before packaging.",
+  "packaged_make_test_exit_code": 0,
+  "packaged_make_test_sanitize_exit_code": 0,
+  "portable_script_syntax_and_help_checked": true,
+  "portable_driver_comparison_checked": true
+}

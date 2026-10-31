@@ -1,0 +1,15 @@
+{
+  "command": [
+    "gaster-status",
+    "status"
+  ],
+  "binary_sha256": "5cde4cc513d1eb71dbb99636fc18d1a4e3d7121a0c5099dbd0e5a71d2a3cb698",
+  "started_utc": "2026-10-31T10:30:17.187415+00:00",
+  "environment_override": {
+    "GASTER_USB_TRACE": "1",
+    "USB_TIMEOUT": "1000"
+  },
+  "authorization": "Current user request explicitly authorizes read-only real-device status verification. No RPC/AES/probe/exploit/reset/firmware write authorized by this run.",
+  "exit_code": 0,
+  "finished_utc": "2026-10-31T10:30:17.212810+00:00"
+}

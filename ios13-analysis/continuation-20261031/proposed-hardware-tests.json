@@ -1,0 +1,43 @@
+{
+  "status": "prepared_not_executed_pending_authorization_for_ram_commands",
+  "binary": "/home/ubuntu/ios13-analysis/continuation-20261031/gaster-status",
+  "binary_sha256": "5cde4cc513d1eb71dbb99636fc18d1a4e3d7121a0c5099dbd0e5a71d2a3cb698",
+  "stop_on_any_failure": true,
+  "no_retry": true,
+  "no_automatic_exploit_or_reset": true,
+  "writes_firmware": false,
+  "changes_dfu_ram_buffer": true,
+  "operations": [
+    {
+      "order": 1,
+      "argv": [
+        "/home/ubuntu/ios13-analysis/continuation-20261031/gaster-status",
+        "probe"
+      ],
+      "environment_override": {
+        "GASTER_USB_TRACE": "1"
+      },
+      "host_deadline_seconds": 20,
+      "effect": "Stages a 40-byte MEMC RPC command plus DFU framing in RAM; requests 16-byte reply; does not execute AES.",
+      "pass_criteria": "exit 0, DONE_MAGIC and expected memcpy return value"
+    },
+    {
+      "order": 2,
+      "only_if_previous_passed": true,
+      "argv": [
+        "/home/ubuntu/ios13-analysis/continuation-20261031/gaster-status",
+        "decrypt_kbag_pwned",
+        "c6187889d7252320a6724830b75846a48c77c55aa226f456c864711ff66c519054328fff30fdb68adab005296ff40fc2"
+      ],
+      "environment_override": {
+        "GASTER_USB_TRACE": "1"
+      },
+      "host_deadline_seconds": 20,
+      "input_component_path": "/home/ubuntu/ios13-analysis/continuation-20261031/native-n61-12.5.8/Firmware/dfu/iBSS.n61.RELEASE.im4p",
+      "input_component_sha256": "ca9b27b178f0fffa267d80a1e0d0d6d6751dd3bf11f528632c5f8f2235dffa2e",
+      "input_kind": "type-1 encrypted KBAG of native iBSS N61 12.5.8 16H88, 48 bytes",
+      "effect": "Stages a 120-byte AES RPC request plus DFU framing in RAM; requests 64-byte reply. Does not load a bootloader or write firmware.",
+      "pass_criteria": "exit 0, DONE_MAGIC, AES return 0, 48-byte IV/key; then decrypt iBSS offline and validate ARM64 iBoot structure"
+    }
+  ]
+}

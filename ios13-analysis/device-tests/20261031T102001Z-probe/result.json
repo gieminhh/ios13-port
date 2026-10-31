@@ -1,0 +1,14 @@
+{
+  "command": [
+    "/home/ubuntu/ios13-analysis/builds/gaster-diagnostic",
+    "probe"
+  ],
+  "environment_override": {
+    "GASTER_USB_TRACE": "1"
+  },
+  "binary_sha256": "b8c2998d7a38c6b8406c4fdf231c5780e91808c6cf99aee5245d5134ade4ad47",
+  "started_utc": "2026-10-31T10:20:01.808970+00:00",
+  "authorization": "User approved this exact single probe command; no retry/exploit/reset/restore authorized in this run.",
+  "exit_code": 1,
+  "finished_utc": "2026-10-31T10:20:01.834313+00:00"
+}

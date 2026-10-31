@@ -1,0 +1,39 @@
+# Large binary firmware archives
+*.ipsw
+*.dmg
+
+# Kernel caches and large raw payloads
+kernelcache*
+KernelCache*
+*.payload
+*.decompressed
+extracted-ipad-mini4/kernelcache*
+boot-bundle/kernelcache*
+continuation-*/native-n61-*/KernelCache*
+continuation-*/native-n61-*/kernelcache*
+
+# Toolchains and package downloads
+toolchain/
+packages/
+*.deb
+
+# Build artifacts, compiled test ELFs & caches
+build/
+**/build/
+__pycache__/
+**/*.pyc
+*.o
+*.a
+*.elf
+*mock*
+gaster-status
+gaster-diagnostic*
+baseline-regression-test
+gaster/gaster
+gaster-backup.tar.gz
+
+# Secrets and keys
+.env
+*.key
+*.shsh
+*.shsh2

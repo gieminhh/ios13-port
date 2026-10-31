@@ -1,0 +1,195 @@
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+BootROM profile CPID (from SRTG): 0x7000
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+USB mode: DFU (VID 0x05AC, PID 0x1227); configuration: 1.
+PWND:[checkm8] marker: present.
+DFU state: 2 (dfuIDLE).
+Status read completed; RPC and AES were not tested.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+USB mode: DFU (VID 0x05AC, PID 0x1227); configuration: 1.
+PWND:[checkm8] marker: absent.
+DFU state: 2 (dfuIDLE).
+Status read completed; RPC and AES were not tested.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+USB mode: DFU (VID 0x05AC, PID 0x1227); configuration: 1.
+PWND:[checkm8] marker: present.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+USB mode: DFU (VID 0x05AC, PID 0x1227); configuration: 1.
+PWND:[checkm8] marker: present.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+USB mode: DFU (VID 0x05AC, PID 0x1227); configuration: 1.
+PWND:[checkm8] marker: present.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+USB mode: DFU (VID 0x05AC, PID 0x1227); configuration: 1.
+PWND:[checkm8] marker: present.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+USB mode: DFU (VID 0x05AC, PID 0x1227); configuration: 1.
+PWND:[checkm8] marker: present.
+DFU state: 10 (dfuERROR).
+Status read completed; RPC and AES were not tested.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x8000
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+Found already-pwned N61AP; exploit/reset skipped.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+Found already-pwned N61AP; exploit/reset skipped.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+RPC probe succeeded (DONE_MAGIC, zero-length memcpy); AES was not executed.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+Found already-pwned N61AP; exploit/reset skipped.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+Found already-pwned N61AP; exploit/reset skipped.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+Found already-pwned N61AP; exploit/reset skipped.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+Found already-pwned N61AP; exploit/reset skipped.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+usb_timeout: 5
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+Found already-pwned N61AP; exploit/reset skipped.
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+IV: 000102030405060708090A0B0C0D0E0F, key: 101112131415161718191A1B1C1D1E1F202122232425262728292A2B2C2D2E2F
+usb_timeout: 5
+usb_timeout: 5
+Version: 2095825-identity-fixed-status
+Usage: env gaster-mock options
+env:
+USB_TIMEOUT - USB timeout in ms
+GASTER_USB_TRACE=1 - Trace setup packets, backend results and timing (no payload data)
+options:
+reset - Reset DFU state
+pwn - Put the device in pwned DFU mode
+decrypt src dst - Decrypt file using GID0 AES key
+decrypt_kbag kbag - Decrypt KBAG using GID0 AES key
+status - Read N61AP identity, DFU state and PWND marker; no RPC, AES or reset
+probe - Probe the RPC on an already-pwned N61AP; no automatic exploit/reset
+decrypt_kbag_pwned kbag - Decrypt KBAG on an already-pwned N61AP; no automatic exploit/reset
+PASS: 56 offline USB/CLI cases; no real libusb library linked.

@@ -1,0 +1,42 @@
+
+=== ANS ===
+Property: reg
+  N61: {'addr': 134479872, 'size': 8192}
+  J96: [{'addr': 134479872, 'size': 8192}, {'addr': 134610944, 'size': 4096}, {'addr': 235012096, 'size': 4096}, {'addr': 15728640, 'size': 1048576}]
+Property: clock-gates
+  N61: [22]
+  J96: [22, 53]
+
+=== I2C0/PMU ===
+Property: compatible
+  N61: 'pmu,d2186'
+  J96: 'pmu,d2207'
+Property: reg
+  N61: {'addr': 10737418240116, 'size': 0}
+  J96: {'addr': 10737418240060, 'size': 0}
+Property: interrupts
+  N61: [106, 1]
+  J96: [107, 1]
+
+=== PMGR ===
+Property: function-disable_temp
+  N61: {'phandle': 131, 'function': 'DTMP'}
+  J96: {'phandle': 123, 'function': 'DTMP'}
+
+=== MCC ===
+Property: config-data
+  N61: 'EAAAAAAAAABfCQAAAQAAAAoAAAAKAAAA6AMAAKCGAQBkAAAAVQAAABUAAAAQAAAAAAAAAF8JAAABAAAACgAAAAoAAADoAwAAoIYBAGQAAABVAAAAFQAAAAgAAAABAAAAXwkAAAEAAAAKAAAACgAAAOgDAACghgEAZAAAAFUAAAAVAAAAEAA...
+  J96: 'EAAAAAAAAABfCQAAAQAAAAoAAAAKAAAA6AMAAKCGAQBkAAAAVQAAABEAAAAQAAAAAAAAAF8JAAABAAAACgAAAAoAAADoAwAAoIYBAGQAAABVAAAAEQAAABAAAAAAAAAAXwkAAAEAAAAKAAAACgAAAOgDAACghgEAZAAAAFUAAAARAAAAEAA...
+
+=== DART-AVE ===
+Property: iommu-parent
+  N61: [106]
+  J96: [101]
+
+=== DISP0 ===
+Property: iommu-parent
+  N61: [91]
+  J96: [87]
+Property: function-lcd_enable
+  N61: {'phandle': 88, 'function': 'lcdE'}
+  J96: {'phandle': 82, 'function': 'lcdE'}

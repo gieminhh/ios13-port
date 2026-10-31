@@ -1,0 +1,13 @@
+usb_timeout: 5
+Version: 2095825-diagnostic
+Usage: env /home/ubuntu/ios13-analysis/builds/gaster-diagnostic options
+env:
+USB_TIMEOUT - USB timeout in ms
+GASTER_USB_TRACE=1 - Trace setup packets, backend results and timing (no payload data)
+options:
+reset - Reset DFU state
+pwn - Put the device in pwned DFU mode
+decrypt src dst - Decrypt file using GID0 AES key
+decrypt_kbag kbag - Decrypt KBAG using GID0 AES key
+probe - Probe the RPC on an already-pwned N61AP; no automatic exploit/reset
+decrypt_kbag_pwned kbag - Decrypt KBAG on an already-pwned N61AP; no automatic exploit/reset

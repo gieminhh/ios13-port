@@ -1,0 +1,447 @@
+{
+  "native12_kext_count": 194,
+  "ios13_kext_count": 203,
+  "only_native12": [
+    "com.apple.driver.AppleCS42L67Audio",
+    "com.apple.driver.AppleChestnutDisplayPMU",
+    "com.apple.driver.AppleD2186PMU",
+    "com.apple.driver.AppleDRV2604Vibrator",
+    "com.apple.driver.AppleMultitouchSPIC1F57",
+    "com.apple.driver.AppleMultitouchSPIN56",
+    "com.apple.driver.AppleMultitouchSPIN61",
+    "com.apple.driver.ApplePinotLCD",
+    "com.apple.driver.AppleSN2400Charger",
+    "com.apple.iokit.IOAcceleratorFamily",
+    "com.apple.iokit.usb.AppleUSBHostUserClient",
+    "com.apple.nke.pptp"
+  ],
+  "only_ios13": [
+    "com.apple.driver.AppleANXDPTX",
+    "com.apple.driver.AppleActuatorDriver",
+    "com.apple.driver.AppleCS42L81Audio",
+    "com.apple.driver.AppleD2207PMU",
+    "com.apple.driver.AppleDPDisplay",
+    "com.apple.driver.AppleEmbeddedAudioLibs",
+    "com.apple.driver.AppleEmbeddedProx",
+    "com.apple.driver.AppleInputDeviceSupport",
+    "com.apple.driver.AppleMAX98721Amp",
+    "com.apple.driver.AppleMultitouchDriver",
+    "com.apple.driver.AppleMultitouchSPIJ96",
+    "com.apple.driver.AppleSPU",
+    "com.apple.driver.AppleTopCaseActuatorHIDDriver",
+    "com.apple.driver.AppleTopCaseHIDEventDriver",
+    "com.apple.driver.AppleUSBTopCaseDriver",
+    "com.apple.driver.usb.AppleUSBHostPlatformProperties",
+    "com.apple.driver.watchdog",
+    "com.apple.iokit.CoreAnalyticsFamily",
+    "com.apple.iokit.IOAccessoryPortUSB",
+    "com.apple.iokit.IOBiometricFamily",
+    "com.apple.iokit.IODisplayPortFamily"
+  ],
+  "critical_components": [
+    {
+      "id": "com.apple.driver.AppleBCMWLANFirmware.Hashstore",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.kpi.iokit": "13.0",
+        "com.apple.kpi.libkern": "13.0",
+        "com.apple.kpi.mach": "13.0.0",
+        "com.apple.driver.corecapture": "1.0.0",
+        "com.apple.driver.IOImageLoader": "1.0",
+        "com.apple.kpi.bsd": "13.0.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.iokit.IOStorageFamily",
+      "native12_version": "2.1",
+      "present_in_13": true,
+      "ios13_version": "2.1",
+      "native12_dependencies": {
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.private": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.bsd": "8.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleD2186PMU",
+      "native12_version": "1.0.1",
+      "present_in_13": false,
+      "ios13_version": null,
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.driver.AppleDialogPMU": "1.0.0",
+        "com.apple.iokit.IOHIDFamily": "1.4",
+        "com.apple.driver.AppleEmbeddedTempSensor": "1.0.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.driver.AppleARMPMU": "1.0.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.iokit.EncryptedBlockStorage",
+      "native12_version": "1.0.0",
+      "present_in_13": true,
+      "ios13_version": "1.0.0",
+      "native12_dependencies": {
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.iokit.IOStorageFamily": "1.5",
+        "com.apple.iokit.IOCryptoAcceleratorFamily": "1.0.1",
+        "com.apple.kpi.bsd": "8.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleEffaceableStorage",
+      "native12_version": "1.0",
+      "present_in_13": true,
+      "ios13_version": "1.0",
+      "native12_dependencies": {
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.bsd": "8.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleSEPManager",
+      "native12_version": "1.0.1",
+      "present_in_13": true,
+      "ios13_version": "1.0.1",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kec.corecrypto": "1.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.private": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleA7IOP": "1.0.1",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.driver.AppleSMC": "1.0",
+        "com.apple.driver.IOSlaveProcessor": "1.0.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.iokit.IOUSBMassStorageDriver",
+      "native12_version": "145.200.2",
+      "present_in_13": true,
+      "ios13_version": "157.140.1",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "9.0.0",
+        "com.apple.kpi.libkern": "9.0.0",
+        "com.apple.kpi.mach": "9.0.0",
+        "com.apple.kpi.iokit": "9.0.0",
+        "com.apple.iokit.IOUSBHostFamily": "1.0.1",
+        "com.apple.iokit.IOStorageFamily": "1.0.0",
+        "com.apple.iokit.IOSCSIArchitectureModelFamily": "1.0.0",
+        "com.apple.kpi.private": "9.0.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleT7000SmartIO",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.iokit.IOCryptoAcceleratorFamily": "1.0.0",
+        "com.apple.driver.AppleA7IOP": "1.0.0",
+        "com.apple.driver.IOSlaveProcessor": "1.0.0",
+        "com.apple.kpi.private": "8.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleSEPKeyStore",
+      "native12_version": "2",
+      "present_in_13": true,
+      "ios13_version": "2",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.driver.AppleEffaceableStorage": "1.0.0",
+        "com.apple.driver.IOSlaveProcessor": "1.0.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleMobileFileIntegrity": "1.0.2",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.private": "8.0",
+        "com.apple.iokit.IOCryptoAcceleratorFamily": "1.0.0",
+        "com.apple.driver.AppleSEPManager": "1.0.0",
+        "com.apple.kec.corecrypto": "1.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleChestnutDisplayPMU",
+      "native12_version": "1",
+      "present_in_13": false,
+      "ios13_version": null,
+      "native12_dependencies": {
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.bsd": "8.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleT7000PMGR",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.private": "8.0",
+        "com.apple.driver.ApplePMGR": "1.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleT7000PCIe",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.iokit.IOPCIFamily": "2.7",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.driver.AppleEmbeddedPCIE": "1.0.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.private": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.iokit.IOReportFamily": "1.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleMultitouchSPIN61",
+      "native12_version": "2140.3",
+      "present_in_13": false,
+      "ios13_version": null,
+      "native12_dependencies": {
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.driver.AppleMultitouchSPI": "1.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleSEPCredentialManager",
+      "native12_version": "1.0",
+      "present_in_13": true,
+      "ios13_version": "1.0",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.driver.AppleSEPManager": "1.0.0",
+        "com.apple.kec.corecrypto": "1.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.driver.IOSlaveProcessor": "1.0.0",
+        "com.apple.kpi.private": "8.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.USBStorageDeviceSpecifics",
+      "native12_version": "456.260.3",
+      "present_in_13": true,
+      "ios13_version": "489.120.1",
+      "native12_dependencies": {
+        "com.apple.kpi.mach": "9.0.0",
+        "com.apple.kpi.iokit": "9.0.0",
+        "com.apple.kpi.libkern": "9.0.0",
+        "com.apple.kpi.bsd": "9.0.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.usb.AppleUSBHostT7000",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "15.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.unsupported": "15.0",
+        "com.apple.driver.AppleUSBHSIC": "1.0",
+        "com.apple.iokit.IOUSBHostFamily": "1.2",
+        "com.apple.driver.usb.AppleUSBOHCI": "1.2",
+        "com.apple.kpi.iokit": "15.0",
+        "com.apple.driver.AppleEmbeddedUSB": "1.0",
+        "com.apple.driver.AppleEmbeddedUSBHost": "1.0",
+        "com.apple.kpi.mach": "15.0",
+        "com.apple.driver.usb.AppleUSBCommon": "1.0",
+        "com.apple.driver.usb.AppleUSBEHCI": "1.2",
+        "com.apple.kpi.private": "16.5.0",
+        "com.apple.kpi.libkern": "15.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleBCMWLANCore",
+      "native12_version": "1.0.0",
+      "present_in_13": true,
+      "ios13_version": "1.0.0",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.libkern": "8.0.0",
+        "com.apple.kpi.unsupported": "8.0.0",
+        "com.apple.iokit.IOTimeSyncFamily": "500.10",
+        "com.apple.iokit.IONetworkingFamily": "1.5.0",
+        "com.apple.driver.AppleMobileFileIntegrity": "1.0.1",
+        "com.apple.kpi.iokit": "8.0.0",
+        "com.apple.driver.corecapture": "1.0.0",
+        "com.apple.driver.AppleOnboardSerial": "1.0",
+        "com.apple.kpi.mach": "8.0.0",
+        "com.apple.driver.IOImageLoader": "1.0",
+        "com.apple.kpi.private": "8.0.0",
+        "com.apple.iokit.IO80211Family": "1.5.0",
+        "com.apple.kec.corecrypto": "1.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleBCMWLANBusInterfacePCIe",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.iokit.IOPCIFamily": "1.0.0",
+        "com.apple.kpi.unsupported": "8.0.0",
+        "com.apple.driver.AppleBluetoothDebugService": "1.0.0",
+        "com.apple.iokit.IONetworkingFamily": "1.5.0",
+        "com.apple.kpi.iokit": "8.0.0",
+        "com.apple.driver.AppleBCMWLANCore": "1.0.0",
+        "com.apple.driver.corecapture": "1.0.0",
+        "com.apple.driver.AppleOnboardSerial": "1.0",
+        "com.apple.kpi.mach": "8.0.0",
+        "com.apple.driver.AppleEmbeddedPCIE": "1.0.0",
+        "com.apple.driver.IOImageLoader": "1.0",
+        "com.apple.kpi.private": "8.0.0",
+        "com.apple.iokit.IO80211Family": "1.5.0",
+        "com.apple.kpi.libkern": "8.0.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleT7000CLPC",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.driver.ApplePMGR": "1.0",
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kec.Libm": "1.0.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.private": "8.0",
+        "com.apple.iokit.IOReportFamily": "1.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleStorageDrivers",
+      "native12_version": "456.260.3",
+      "present_in_13": true,
+      "ios13_version": "489.120.1",
+      "native12_dependencies": null,
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.ApplePinotLCD",
+      "native12_version": "1.0.0",
+      "present_in_13": false,
+      "ios13_version": null,
+      "native12_dependencies": {
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.bsd": "8.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleT7000",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.driver.AppleCycloneErrorHandler": "1.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.private": "8.0",
+        "com.apple.iokit.IOReportFamily": "1.0"
+      },
+      "native12_executable_size": null
+    },
+    {
+      "id": "com.apple.driver.AppleT7000SOCTuner",
+      "native12_version": "1",
+      "present_in_13": true,
+      "ios13_version": "1",
+      "native12_dependencies": {
+        "com.apple.driver.ApplePMGR": "1.0",
+        "com.apple.kpi.libkern": "8.0",
+        "com.apple.kpi.bsd": "8.0",
+        "com.apple.kpi.mach": "8.0",
+        "com.apple.kpi.iokit": "8.0",
+        "com.apple.kpi.unsupported": "8.0",
+        "com.apple.driver.AppleARMPlatform": "1.0.0",
+        "com.apple.kpi.private": "8.0",
+        "com.apple.iokit.IOReportFamily": "1.0"
+      },
+      "native12_executable_size": null
+    }
+  ],
+  "limitation": "Metadata comparison establishes presence and declared versions, not ABI compatibility or hardware behavior."
+}

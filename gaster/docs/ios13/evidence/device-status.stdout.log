@@ -1,0 +1,9 @@
+usb_timeout: 1000
+[libusb] Waiting for the USB handle with VID: 0x5AC, PID: 0x1227
+BootROM profile CPID (from SRTG): 0x7000
+Verified DFU identity: CPID 0x7000, BDID 0x06 (N61AP / iPhone7,2).
+Found the USB handle.
+USB mode: DFU (VID 0x05AC, PID 0x1227); configuration: 1.
+PWND:[checkm8] marker: present.
+DFU state: 8 (dfuMANIFEST-WAIT-RESET).
+Status read completed; RPC and AES were not tested.
